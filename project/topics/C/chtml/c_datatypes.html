@@ -70,13 +70,73 @@
 <div  style="margin-left: 25px;">
   <li>Basic</li>
   <li>Derived</li>
+  <li>user defined</li>
   <li>emuneration</li>
   <li>void</li>
 </div>
 <p><h4 class="headerr">Basic datatype : </h4></p>
 <p>The basic data types are integer-based and floating-point based. C language supports both signed and unsigned literals.The memory size of the basic data types may change according to 32 or 64-bit operating system</p>
- <p>following are the basic datatypes and their sizes</p>
- <table class="alt">
+<p>basically,there are four basic datatypes used in any programming language including c programming language. they are as follows.</p>
+<div  style="margin-left: 25px;">
+  <li>int</li>
+  <li>char</li>
+  <li>float</li>
+  <li>double</li>
+</div>
+
+<p><h4 class="headerr"> int : </h4></p>
+<p>Integers are whole numbers that can have both zero, 
+  positive and negative values but no decimal values. 
+  We can use <b>int</b>  for declaring an integer variable.</p>
+  <div style="margin-left: 25px;" >
+    <code>
+      int a;
+      a=10;
+      <br>int b=30;
+</code>
+</div>
+<p></p>
+ <p>You can declare multiple variables at once in C programming separating by " , " For example,</p>
+ <div style="margin-left: 25px;" >
+  <code>
+      int a ,b,age=21;
+      <br>   a=10;
+      <br> b=30;
+</code>
+</div>
+<p></p>
+<p><h4 class="headerr"> float and double : </h4></p>
+<p>The floating point data type allows the user to type decimal values.It can negative value too.</p>
+<div style="margin-left: 25px;" >
+  <code>
+      float a ,b=3.1;
+      <br>   a=1.0;
+      <br> double c=3.0;
+</code>
+</div>
+ <li>What's the difference between float and double?</li>
+<p style="margin-left: 20px;" >The size of float (single precision float data type) is 4 bytes. And the size of double (double precision float data type) is 8 bytes.</p>
+<p><h4 class="headerr"> char : </h4></p>
+<p>char stores a single character. Char consists of a single byte.Note that for a single character,
+   we use single quotes, but for String (character array), we use double-quotes. Since its an array, we have to specify the length</p>
+
+   <div style="margin-left: 25px;" >
+    <code>
+      char alpha = ‘a’;
+      <br>  To print a name or a full string, we need to define char array. 
+      <br>  char abc = 'z';
+      <br>char name[30] = "ITGEEKHUB";
+      <br>printf("group is %c, name is %s", group, name);
+  </code>
+  </div>
+  <p></p>
+
+
+
+
+<p></p>
+<p>following are the basic datatypes and their sizes</p>
+<table class="alt">
   <tr><th>Data Types</th><th>Memory Size</th><th>Range</th></tr>
   <tr><td style="color: black;"><b>char</b></td><td>1 byte</td><td>&#x2212;128 to 127</td></tr>
   <tr><td>signed char</td><td>1 byte</td><td>&#x2212;128 to 127</td></tr>
@@ -103,8 +163,9 @@
 <li>Function </li>
 <li>Array</li>
 <li>Pointer</li>
-<li>References</li>
+<li>references</li>
 </div>
+<p> <p><h4 class="headerr">function : </h4></p></p>
 <p><h4 class="headerr">Enumeration : </h4></p>
 <p>Enumeration (or enum) is a user defined data type in C. It is mainly used to assign names to integral constants, 
   the names make a program easy to read and maintain.n C programming, an enumeration type (also called enum) is a data type that consists of integral constants. 
@@ -126,7 +187,19 @@
       <br> hearts = 20,
       <br>spades = 3,
 };
-
+</code>
+</div>
+<p></p>
+<p><h4 class="headerr">void : </h4></p>
+<p>The void is just an empty data type used as a return type for functions. The absence of any other data type is void. When you declare a function as void, 
+  it doesn’t have to return anything. For example –</p>
+  <div style="margin-left: 25px;" >
+    <code>
+      <br> void swapNumbers(int a, int b){
+        <br>//multiple lines of code here
+        <br>}
+    </code>
+  </div>
 
 
  <!-- Site footer -->

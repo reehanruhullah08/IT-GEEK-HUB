@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--css-->
+    <link rel="stylesheet" href="../ccss/c.css">
+   
+    <!--box icon-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<!--bootstrap-->
+<link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    
+<body class="bgco">
+    
+    <div class="container-fluid">
+        <div class="row">
+<nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebaropen'></i>
+        <span class="logo">
+            <a href="#">IT GeeK HuB</a>
+        </span>
+            <div class="menu">
+              <div class="logo-toggle">
+                <span class="logo">
+                    <a href="#">IT GeeK HuB</a>
+                    </span>
+                    <i class='bx bx-right-arrow-alt sidebarclose'></i>
+              </div>
+
+               <ul class="nav-links">
+                    <li><a href="../../../home.html">Home</a></li>
+                    <li><a href="../../../courses/cousesindex.html">Topics</a></li>
+                    <li><a href="../../../home.html#games">Games</a></li>
+                    <li><a href="../../../possible_question/poss_quest.html">Important Question</a></li>
+                    <li><a href="../../../contact-form-18/index.html">Contact us</a></li>
+                    <li><a href="#">Sign up</a></li>
+                  
+                </ul>
+            </div>
+            <div class="darklight-searchbox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun' ></i>
+                </div>
+            </div>
+     </div>
+</nav>
+</div>
+
+<div class="row "  style= "margin-top: 65px;">
+    <h1 class="headerr">Input and Output Operations</h1>
+</div>
+<p><h5 class="headerr">Input : means to provide the program with some data to be used in the program </h5> </p>
+<p><h5 class="headerr">Output means to display data on the screen or write the data to a printer or a file. </h5> </p>
+<p>The C programming language provides standard library functions to read any given input and to display data on the console(i.e your monitor screen/window).</p>
+<p>The functions used for standard input and output are present in the stdio.h header file. Hence to use the functions we need to include the stdio.h header file in our program, as shown below.</p>
+
+<div style="margin-left: 25px;" >
+    <code>
+        #include &#60; stdio.h&#62;
+</code></div>
+<p></p>
+<p>Following are the functions used for standard input and output:</p>
+<div>
+    <li>printf() function - Show Output</li>
+
+    <li>  scanf() function - Take Input</li>
+        
+    <li> getchar() and putchar() function</li>
+        
+    <li>  gets() and puts() function</li>
+</div>
+<p> <h4 class="headerr">printf() function : </h4></p>
+<p>The printf() function is the most used function in the C language. This function is defined in the stdio.h header file and is used to show output on the console (standard output).This function is used to print a simple text sentence or value of any variable which can be of int, char, float, or any other datatype.</p>
+<p>Let's print a simple sentence using the printf() function.</p>
+<div style="margin-left: 25px;" >
+    <code>
+        #include &#60; stdio.h &#62;
+
+          <br>  int main() {
+            <br>   // using printf()
+            <br> printf("ITGEEKHUB");
+            
+            <br>    return 0;
+            <br> }
+</code></div>
+<P></P>
+<P>We can use the printf() function to print integer value coming from variable using the %d format specifier.
+
+    For example,</P>
+    <div style="margin-left: 25px;" >
+    <code>
+        #include &#60; stdio.h &#62;
+
+            <br> int main() {
+                <br>  int x = 10;
+                <br>   // using printf()
+                <br>printf("Value of x is: %d", x);
+            
+                <br>   return 0;
+                <br>  }
+
+                <br>
+                <br> output: Value of x is: 10
+</code></div>
+<p></p>
+<p>In the program, above we have used the %d specifier, to specify the type of the value that will be added there. The format specifiers %d and %i are used for integer value.</p>
+<p>The %c format specifier is used to print character variable value using the printf() function.</p>
+<div style="margin-left: 25px;" >
+    <code>
+        #include  &#60; stdio.h&#62;
+
+            <br> int main() {
+                <br>   // using printf()
+                <br>  char gender = 'M';
+                  
+                <br> printf("John's Gender is: %c", gender);
+                <br> return 0;
+                <br> }
+                <br>
+                <br> output: John's Gender is: M
+</code></div>
+<p></p>
+<p>For float value we use the %f format specifier and for double value we use the %lf format specifier.</p>
+<div style="margin-left: 25px;" >
+    <code>
+                    int main() {
+                        <br>   // using printf() 
+                        <br>   float num1 = 15.50;
+                        <br>   double num2 = 15556522.0978678;
+                       
+                        <br> printf("Value of num1 is: %f \n", num1);
+                       <br>   printf("Value of num2 is: %lf", num2);
+                    
+                       <br> return 0;
+                       <br> }
+                       <br>
+                       <br>
+                        Output :Value of num1 is: 15.500000
+                        <br> Value of num2 is: 15556522.097868
+
+
+</code></div>
+<p>We can use a single printf() function to display values of multiple variables.</p>
+<div style="margin-left: 25px;" >
+    <code>
+        #include  &#60;stdio.h&#62;
+
+            <br> int main() {
+                <br> // using printf() for multiple outputs 
+                <br>     int day = 20;
+                <br>   int month = 11;
+                <br>    int year = 2021;
+               
+                <br>   printf("The date is: %d-%d-%d", day, month, year);
+               <br> 
+               <br>   return 0;
+               <br> }
+               <br> <br> output: The date is: 20-11-2021
+        </code>
+        </div>
+<p></p>
+<p> <h4 class="headerr">scanf() function : </h4></p>
+<p>When we want to take input from the user, we use the scanf() function. When we take input from the user, 
+    we store the input value into a variable.The scanf() function can be used to take any datatype input from user,
+     all we have to take care is that the variable in which we store the value has the same datatype.</p>
+<p>Let's see a few code examples.</p>
+
+<div style="margin-left: 25px;" >
+    <code>
+        #include &#60;stdio.h&#62;
+
+          <br>  int main() {
+            <br>   // using scanf() 
+            <br> int user_input;
+               
+            <br>printf("Please enter a number: ");
+               <br>  scanf("%d", &user_input);
+               <br>    printf("You entered: %d", user_input);
+            
+               <br>   return 0;
+           <br> }
+            <br>
+            <br>
+            output: Please enter a number: 7
+               <br>     You entered: 7
+            </code>
+        </div>
+<p></p> 
+<p>In the above code example, we have used %d format specifier to inform the scanf() function that user input will be of type integer.
+    And we have also used & symbol before the name of the variable, because &user_input refers to the address of the user_input variable where the user input value will be stored.</p> 
+<p>Just like integer value, we can take input for any different datatype. Let's see an example for float type value.We have used the %f format specifier and defined a float type variable.
+     Try doing the same for taking a double type value as user input. 
+    The format specifier for double is %lf.</p>
+    <div style="margin-left: 25px;" >
+        <code>
+            #include <stdio.h>
+                <br>  int main() {
+                    <br>   // using scanf() 
+                    <br>   float user_input;
+                   <br>   
+                   <br>  printf("Please enter a decimal number: ");
+                   <br>   scanf("%f", &user_input);
+                   <br>  printf("You entered: %f", user_input);
+                
+                   <br> return 0;
+                   <br> }
+
+                   <br>
+                   <br>output:Please enter a decimal number: 7.007
+                   <br> You entered: 7.007
+                </code>
+            </div>
+            <p></p>
+<p>Let's see how we can take a simple character input from user.</p>
+
+    <div style="margin-left: 25px;" >
+        <code>
+            #include &#60;stdio.h&#62;
+    
+            <br>int main() {
+                <br>     // using scanf() 
+                <br>    char gender;
+                   
+                <br>    printf("Please enter your gender (M, F or O): ");
+                <br>   scanf("%c", &gender);
+                   <br>   printf("Your gender: %c", gender);
+                
+                   <br>   return 0;
+                   <br> }
+
+                   <br>   
+                <br>output:Please enter your gender (M, F or O): M
+                <br>   Your gender: M
+                </code>
+            </div>
+<p></p>
+<p> <h4 class="headerr">getchar() & putchar() functions : </h4></p>
+<p>The getchar() function reads a character from the terminal and returns it as an integer. 
+    This function reads only a single character at a time.
+    You can use this method in a loop in case you want to read more than one character.</p>
+    <p>The putchar() function displays the character passed to it on the screen and returns the same character. \
+        This function too displays only a single character at a time.
+        In case you want to display more than one character, use putchar() method in a loop.</p>
+        <div style="margin-left: 25px;" >
+            <code>
+                #include &#60;stdio.h&#62;
+
+                <br>void main( )
+                <br>  {
+                    <br>     int c;
+                    <br> printf("Enter a character");
+                    <br>  /*
+                    <br>      Take a character as input and 
+                    <br>      store it in variable c
+                    <br>   */
+                    <br>   c = getchar();
+                    <br> /*
+                    <br>      display the character stored 
+                    <br>       in variable c 
+                            <br>   */
+                            <br>putchar(c);
+                            <br> }<br>
+                            <br>
+                            <br>
+
+
+                            <br> output: Enter a character: Studytonight
+                            <br>  S
+                    </code>
+                </div>
+                <p></p>
+                <p>When you will compile the above code, it will ask you to enter a value. When you will enter the value, it will display the value you have entered.</p>
+                <p> <h4 class="headerr">gets() & puts() functions : </h4></p>
+                 <p>The gets() function reads a line from stdin(standard input) into the buffer pointed to by str pointer, until either a terminating newline or EOF (end of file) occurs.
+
+                    The puts() function writes the string str and a trailing newline to stdout.</p>
+                    <div style="margin-left: 25px;" >
+                        <code>
+                            #include &#60;stdio.h&#62;
+
+                            <br>void main()
+                            <br>{
+                                <br>     /* character array of length 100 */
+                                <br>   char str[100];
+                                    <br>      printf("Enter a string: ");
+                                    <br>  gets(str);
+                                    <br>  puts(str);
+                                    <br>getch();
+                                    <br> return 0;
+                                    <br>}
+                                    <br>
+                                    <br><br>output: Enter a string: Studytonight
+                                    <br>   Studytonight
+
+                                </code>
+                            </div>
+                            <p></p>
+                            <p>When you will compile the above code, it will ask you to enter a string. When you will enter the string, it will display the value you have entered.</p>
+
+                <p></p>
+    <!-- Site footer -->
+ <footer class="site-footer"  style= "margin-top: 65px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">IT GEEK HUB <i>WANTS TO BE SIMPLE </i> is an initiative, to help the upcoming students with the coding and their subjects. IT GEEK HUB focuses on providing the most efficient code or snippets OR Notes materials as the students wants it to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm and etc.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+            <li><a href="#">TOPICS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+       <a href="#">IT GEEK HUB</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+<script src="../cjs/c.js"></script>
+</body>
+</html>
