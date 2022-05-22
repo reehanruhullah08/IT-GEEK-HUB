@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--css-->
+    <link rel="stylesheet" href="../ccss/c.css">
+    <link rel="stylesheet" href="../ccss/cintro.css">
+   
+    <!--box icon-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<!--bootstrap-->
+<link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    
+<body class="bgco">
+    
+    <div class="container-fluid">
+        <div class="row">
+<nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebaropen'></i>
+        <span class="logo">
+            <a href="#">IT GeeK HuB</a>
+        </span>
+            <div class="menu">
+              <div class="logo-toggle">
+                <span class="logo">
+                    <a href="#">IT GeeK HuB</a>
+                    </span>
+                    <i class='bx bx-right-arrow-alt sidebarclose'></i>
+              </div>
+
+               <ul class="nav-links">
+                    <li><a href="../../../home.html">Home</a></li>
+                    <li><a href="../../../courses/cousesindex.html">Topics</a></li>
+                    <li><a href="../../../home.html#games">Games</a></li>
+                    <li><a href="#">Important Question</a></li>
+                    <li><a href="../../../contact-form-18/index.html">Contact us</a></li>
+                    <li><a href="#">Sign up</a></li>
+                  
+                </ul>
+            </div>
+            <div class="darklight-searchbox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun' ></i>
+                </div>
+            </div>
+     </div>
+</nav>
+</div>
+<div class="row "  style= "margin-top: 65px;">
+    <h1 class="headerr">Introducton to C programming language</h1>
+</div  >
+<p style= "margin-top: 30px;"> C is a procedural programming language.it was initially developed by Dennis Ritchie in the year 1972.
+     It was mainly developed as a system programming language to write an operating system. 
+    The main features of the C language include low-level memory access, a simple set of keywords, and a clean style, 
+    these features make C language suitable for system programmings like an operating system or compiler development.
+    <br> <b>*</b> C programming is considered as the base for other programming languages, that is why it is known as mother language. </p>
+    
+  <h3 class="headerr">Why to use c ?</h3>
+  <p>C was initially used for system development work, in particular the programs that make-up the operating system. C was adoped as a system development language because it produces code that runs nearly as fast as code written in assembly language. Some examples of the use of C might be:</p>
+    <p><div style="margin-left: 25px;">
+      <li>Operating system</li>
+      <li>Language compilers</li>
+      <li>Assemblers</li>
+      <li>Text Editors</li>
+      <li>Print Spoolers</li>
+      <li>Network Drivers</li>
+      <li>Databases</li>
+      <li>Language Interpreters</li>
+    </div></p>
+<h3 class="headerr">let's Begin with C :-</h3>
+
+<p><H4><i>STRUCTURE OF C</i></H4></p>
+<p>C programming includes a header,main() and followed by Body declaration i.e writing statements,declaration of variables and a return statement.</p>
+<p>header:-</P>
+    <P> The first and foremost component is importing(inserting packages and libraries) of the Header files in a C program. header files contain the set of  predefined standard library functions.The “#include” preprocessing directive is used to include the header files with “.h” extension in the program.</p>
+<p><u>some header files are listed below:-</u> </p>
+<p><li>stdio.h:- for Input/Output functions.</li></p>
+<p>	<li>conio.h:- for Console Input/Output functions.</li></p>
+<p>	<li>stdlib.h:- for General utility functions.</li></p>
+<p>	<li>math.h:- for Mathematics functions.</li></p>
+<p>	<li>string.h:- for String functions.</li></p>
+<p><i>Syntax</i></p>
+<code>
+    #include &#60;stdio.h&#62;
+      <br>  #include&#60;stdlib.h&#62;
+     <br>   #include&#60;string.h&#62;
+       <br> #include&#60;math.h&#62;
+        </code>
+<p></p>
+<p>main():-</p>
+<p>main() function is the entry point of any C program. It is the point at which execution of program is started. When a C program is executed,<br> the execution control goes directly to the main() function. Every C program must have a main() function.</p>
+<p><i>Syntax</i></p>
+<code>void main()
+    <br>   {
+<br> .........
+<br>   .........
+<br>     body
+<br>     statements
+<br>   variable declaration
+<br>     .........
+<br>    .........
+<br>   }
+
+</code>
+<p>return statement:-</p>
+<p>The last part of any C program is the return statement. The return statement refers to the returning of the values from a function. This return statement and return value depend upon the return type of the function.</p>
+<p>When program execution reaches the return statement, it will leave the current function and the program execution will resume to the next statement, <br> where it was actually called.</p>
+<p><i>examples</i></p>
+<div style="margin-left: 25px;" >
+<code>
+   <br> return (value or variable);
+   <br>     or
+   <br>  return 10;
+   <br>   or
+       <br>return a;
+       <br>   or
+       <br> return a+b;
+        </code></div>
+        <p></p>
+<p id="try1">
+<a href=""  name="keyidencons" class="linkpage">
+  <h3 class="headerr">keywords:-</h3>
+</a>
+</p>
+<p>Keywords are predefined, reserved words used in programming that have special meanings to the compiler.You cannot use it as a variable name, constant name, etc. There are only 32 reserved words (keywords) in the C language.</p>
+<p>A list of 32 keywords in the c language is given below:</p>
+<div class="cols1">
+ 
+    <li type="none">auto</li> <li type="none">break</li> <li type="none">	case</li>	<li type="none">char</li> <li type="none" >static</li>	<li type="none">const</li>	<li type="none">continue</li>	<li type="none">default</li>	
+  </div>
+  <br>
+  <div class="cols1">
+      <li type="none">double</li> <li type="none">else</li> <li type="none">	enum</li>	<li type="none">extern</li> <li type="none">float</li>	<li type="none">for</li>	<li type="none">	goto</li type="none">	<li type="none">	if</li>	
+  </div>
+     <br>
+  <div class="cols1">
+        <li type="none"> do</li> <li type="none">int</li> <li type="none">	long</li>	<li type="none">register</li> <li type="none">return	</li>	<li type="none">short	</li>	<li type="none">signed</li>	<li type="none">	sizeof</li>	
+      </div>
+      <br>
+      	<div class="cols1">
+              <li type="none">struct</li> <li type="none">switch</li> <li type="none">	typedef</li>	<li type="none">union</li> <li type="none">return	</li>	<li type="none">unsigned	</li>	<li type="none">while</li>	<li type="none">	volatile</li>	
+            </div>	
+            <p></p>
+    <h3 class="headerr">Identifiers:-</h3>
+         <p>Identifiers are names given to different entities such as constants, variables, structures, functions, etc.Identifiers are words or texts used to identify anything in the C language.
+          Just like you have a name, using which everyone calls you, it can be John, Ron, Scarlett, Monica, etc., similarly in the C language, when we define a variable or a function, or a structure, etc. we name them so that it becomes easier for us to identify them and use them whenever required. These names are called Identifiers.
+         </p>
+         <p> <h3 class="headerr">Rules followed while writing Identifiers</h3>
+           <li>
+            An identifier can only have alphanumeric characters (a-z , A-Z , 0-9) (i.e. letters & digits) and underscore( _ ) symbol.</li>
+           <li>Identifier names must be unique</li> 
+            <li> You cannot use a keyword as identifiers.</li>
+            <li> The first character must be an alphabet or underscore.</li>
+            <li>Only the first thirty-one (31) characters are significant.</li>
+            <li> It must not contain white spaces.</li> 
+            <li>Identifiers are case-sensitive.</li>
+             
+         </p>
+
+         <p> Few Example</p>
+         <code class="code">
+          <li> int amount;</li>
+           <br>
+           <li>double totalbalance;</li>
+         </code>
+         <p></p>
+<p>In the above example, amount and totalbalance are identifiers and int, and double are keywords</p>
+  <p></p>
+<h3 class="headerr">Variables</h3>
+<p>A variable is nothing but a name given to a storage area that our programs can manipulate.Each variable in C has a specific type, which determines the size and layout of the variable's memory.The name of a variable can be composed of letters, digits, and the underscore character. 
+  It must begin with either a letter or an underscore.</p>
+<p>A variable definition tells the compiler where and how much storage to create for the variable. A variable definition specifies a data type and contains a list of one or more variables of that type as follows −</p>
+<div style="margin-left: 25px;" >
+<code class="code">
+  type variable_name = value;
+<br>
+  int a = 10;
+</code></div>
+<p></p>
+<h3 class="headerr">Storage classes</h3>
+<p>A storage class defines the scope (visibility) and life-time of variables and/or functions within a C Program. They precede the type that they modify. We have four different storage classes in a C program −</p>
+<div style="margin-left: 25px;">
+  <li>auto</li>
+  <li> register</li>
+ <li>static</li> 
+  <li>extern</li></div>
+<p></p>
+<h3 class="headerr">The auto Storage Class</h3>
+<p>The auto storage class is the default storage class for all local variables.</p>   
+<div style="margin-left: 25px;" >
+<code style="margin-left: 25px;" >
+  {
+    <br>
+    int mount;
+    <br>
+     auto int month;
+     <br>
+  }
+</code ></div>
+<p>The example above defines two variables with in the same storage class. 'auto' can only be used within functions, i.e., local variables.</p>
+<p></p>
+<h3 class="headerr">The register Storage Class</h3>
+<p>The register storage class is used to define local variables that should be stored in a register instead of RAM. This means that the variable has a maximum size equal to the register size (usually one word) and can't have the unary '&' operator applied to it (as it does not have a memory location).</p>
+<div style="margin-left: 25px;" >
+<code>
+  {
+    <br>
+    register int  miles;
+  <br> }
+</code></div>
+<p></p>
+<h3 class="headerr">The static Storage Class</h3>
+<p>The static storage class instructs the compiler to keep a local variable in existence during the life-time of the program instead of creating and destroying it each time it comes into and goes out of scope. Therefore, making local variables static allows them to maintain their values between function calls.
+  The static modifier may also be applied to global variables. When this is done, it causes that variable's scope to be restricted to the file in which it is declared.
+</p>
+<div style="margin-left: 25px;" >
+<code>
+  #include <stdio.h>
+ <br>
+    <br>/* function declaration */
+    <br>void func(void);
+    <br> 
+    <br>static int count = 5; /* global variable */
+    <br>main() {
+      <br>
+      <br>while(count--) {
+        <br>  func();
+        <br> }
+        <br>
+        <br>return 0;
+        <br> }
+        <br>
+        <br>/* function definition */
+        <br>void func( void ) {
+          <br>
+          <br> static int i = 5; /* local static variable */
+          <br>i++;
+      <br>
+      <br> printf("i is %d and count is %d\n", i, count);
+      <br>}
+</code></div>
+<p></p>
+<p>note :- You will learn about function later. don't worry</p>
+<h3 class="headerr">The extern Storage Class</h3>
+<p>The extern storage class is used to give a reference of a global variable that is visible to ALL the program files. When you use 'extern', the variable cannot be initialized however, it points the variable name at a storage location that has been previously defined.
+</p>
+<p>
+  When you have multiple files and you define a global variable or function, which will also be used in other files, then extern will be used in another file to provide the reference of defined variable or function. Just for understanding, extern is used to declare a global variable or function in another file.
+</p>
+<p>The extern modifier is most commonly used when there are two or more files sharing the same global variables or functions as explained below.</p>
+
+<div style="margin-left: 25px;" >
+<code>
+  #include <stdio.h>
+ <br>
+ <br>int count ;
+ <br>extern void write_extern();
+ <br> 
+ <br> main() {
+  <br>    count = 5;
+  <br> write_extern();
+  <br>}
+</code>
+</div>
+
+
+<!-- Site footer -->
+ <footer class="site-footer"  style= "margin-top: 65px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">IT GEEK HUB <i>WANTS TO BE SIMPLE </i> is an initiative, to help the upcoming students with the coding and their subjects. IT GEEK HUB focuses on providing the most efficient code or snippets OR Notes materials as the students wants it to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm and etc.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+            <li><a href="#">TOPICS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+       <a href="#">IT GEEK HUB</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+<script src="../cjs/c.js"></script>
+</body>
+</html>
