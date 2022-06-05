@@ -54,7 +54,7 @@
 </div>
 <div class="row "  style= "margin-top: 65px;margin-left: 20px;">
     <h1 class="headerr">C Input Output (I/O) </h1>
-
+</div>
     <p><h3 class="headerr">C Output : </h3></p>  
     <p>In C programming, printf() is one of the main output function. The function sends formatted output to the screen. For example,</p>
    
@@ -160,10 +160,158 @@
 <p> To print char, we use %c format specifier.</p>
 <p></p>
 <p><h3 class="headerr">C Input : </h3></p> 
+<p>In C programming, scanf() is one of the commonly used function to take input from the user.
+     The scanf() function reads formatted input from the standard input such as keyboards.</p>
+     <p> Integer Input/Output</p>
+     <div style="margin-left: 25px;">
 
+        <code>
+            #include <stdio.h>
+             <br>   int main()
+             <br>   {
+                <br>       int testInteger;
+                <br>       printf("Enter an integer: ");
+                <br>       scanf("%d", &testInteger);  
+                <br>       printf("Number = %d",testInteger);
+                <br>       return 0;
+                <br>   }
+                <br>
+                <br>
+                Output :
+                <br>Enter an integer: 4
+               <br> Number = 4
+            </code>
+        
+        </div>
+    <br>
+    <p></p>
+    <p>Here, we have used %d format specifier inside the scanf() function to take int input from the user. 
+        When the user enters an integer, it is stored in the testInteger variable.</p>
+<p><u>Notice, that we have used &testInteger inside scanf(). It is because &testInteger gets the address of testInteger, 
+    and the value entered by the user is stored in that address.</u></p>
 
+<p><u>Float and Double Input/Output :-</u></p>
+<div style="margin-left: 25px;">
 
+    <code>
+        #include <stdio.h>
+          <br>  int main()
+          <br>   {
+            <br>       float num1;
+            <br>       double num2;
+            
+            <br>      printf("Enter a number: ");
+            <br>      scanf("%f", &num1);
+            <br>      printf("Enter another number: ");
+            <br>     scanf("%lf", &num2);
+            
+            <br>    printf("num1 = %f\n", num1);
+                <br>   printf("num2 = %lf", num2);
+            
+                <br>   return 0;
+                <br> }
+                <br>
+                <br>
+                Output: 
+                <br>
+            <br>    Enter a number: 12.523
+            <br>Enter another number: 10.2
+            <br> num1 = 12.523000
+            <br>num2 = 10.200000 
+        </code>
+    
+    </div>
+<br>
+<p></p>
+<p>We use %f and %lf format specifier for float and double respectively.
 
+</p>
+<p><u>Character I/O :-</u></p>
+
+<div style="margin-left: 25px;">
+
+    <code>
+        #include <stdio.h>
+      <br>      int main()
+      <br>     {
+        <br>         char chr;
+        <br>        printf("Enter a character: ");
+        <br>        scanf("%c",&chr);     
+        <br>        printf("You entered %c.", chr);  
+        <br>        return 0;
+                <br>    }   
+                <br>
+                <br>
+                Output :
+                <br>
+                Enter a character: g
+                <br>    You entered g
+       </code>
+    
+    </div>
+<br>
+<p></p>
+<p>When a character is entered by the user in the above program, the character itself is not stored. Instead, an integer value (ASCII value) is stored.
+
+    And when we display that value using %c text format, the entered character is displayed. If we use %d to display the character, it's ASCII value is printed.</p>
+
+<p><u>I/O Multiple Values :-</u>
+</p>
+<p>Here's how you can take multiple inputs from the user and display them.</p>
+<div style="margin-left: 25px;">
+
+    <code>
+        #include <stdio.h>
+         <br>   int main()
+         <br>   {
+            <br>       int a;
+            <br>      float b;
+            
+            <br>     printf("Enter integer and then a float: ");
+              
+            <br>    // Taking multiple inputs
+                <br>     scanf("%d%f", &a, &b);
+            
+                <br>     printf("You entered %d and %f", a, b);  
+                <br>  return 0;
+                <br> }
+                <br>
+                <br>
+               <br> Output :-
+               <br> Enter integer and then a float: -3
+                <br>   3.4
+              <br> You entered -3 and 3.400000
+       </code>
+    
+    </div>
+<br>
+<p></p>
+<p>Format Specifiers for I/O :-</p>
+<div>
+    <li>%d for int</li>
+    <li>%f for float</li>
+    <li>%lf for double</li>
+    <li>%c for char</li>
+</div>
+<p>Here's a list of commonly used C data types and their format specifiers.</p>
+<table class="alt">
+    <tr><th>Data Type</th><th>Format Specifier</th></tr>
+    <tr><td style="color: black;"><b>int</b></td><td>%d</td></tr>
+    <tr><td>char</td><td>	%c</td></tr>
+    <tr><td style="color: black;">float</td><td>%f</td></tr>
+    <tr><td><b>double</b></td><td>%lf</td></tr>
+    <tr><td style="color: black;">short int</td><td>%hd</td></tr>
+    <tr><td>unsigned int</td><td>%u</td></tr>
+    <tr><td style="color: black;"><b>long int</b></td><td>%li</td></tr>
+    <tr><td>long long int</td><td>%lli</td></tr>
+    <tr><td style="color: black;"><b>unsigned long int</b></td><td>	%lu</td></tr>
+    <tr><td>unsigned long long int</td><td>%llu</td></tr>
+    <tr><td style="color: black;"><b>signed char</b></td><td>%c</td></tr>
+    <tr><td>unsigned char</td><td>%c</td></tr>
+    <tr><td style="color: black;"><b>long double</b></td><td>	%Lf</td></tr>
+    
+    </table>
+    <p></p>
 
 <!-- Site footer -->
 <footer class="site-footer"  style= "margin-top: 65px;">
