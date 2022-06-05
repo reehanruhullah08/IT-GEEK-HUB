@@ -163,6 +163,19 @@ transition: all 0.3s ease;
 }
 
 
+.contents a:hover{
+       font-size: larger;
+       transition: .3s ease-in-out;
+       z-index: 1000;
+       color: rgb(131, 236, 255);
+}
+.linkpage{
+  text-decoration: none;
+  color: white;
+}
+
+
+
 
 
 
