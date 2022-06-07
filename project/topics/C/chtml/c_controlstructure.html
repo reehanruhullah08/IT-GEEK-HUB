@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operators</title>
+    <title>control statements</title>
     <!--css-->
     <link rel="stylesheet" href="../ccss/c.css">
    
@@ -78,16 +78,918 @@
 
 <p><u>In C Programming language we have different types of decision control statements.</u></p>
 <div style= "margin-left: 20px;"> 
- <li>If statements</li>
- <li>Loop Statements</li>
+ <li>Condition or Selection or Decision Control statements</li>
+ <li>Loop / iteration Statements</li>
  <li>Switch statement</li>
- <li>Conditional Operator Statement</li>
- <li>Goto Statement</li>
+ <li>Jump Statements in C – break, continue, goto, return</li>
 
 
 
 </div>
 
+<p> <p><h3 class="headerr">1.	Selection Statements (Decision Control Structure) :- </h3></p></p>
+
+<p>Selection statement allows the program to choose any one path from different set of paths of execution based upon the outcome of an expression or the state of a variable.</p>
+<p>Conditional statements execute sequentially when there is no condition around the statements. If you put some condition for a block of statements, the execution flow may change based on the result evaluated by the condition.
+   This process is called decision making in ‘C.’</p>
+   <p>basically these are categorised in four types :</p>
+<div style= "margin-left: 20px;"> 
+  <li>if</li>
+  <li>if-else</li>
+  <li>nested if else	</li>
+  <li>if else-if</li>
+ </div>
+
+ <p> <p><h4 class="headerr">if statement:- </h4></p></p>
+<p>If statement is responsible for modifying the flow of execution of a program. If statement is always used with a condition. The condition is evaluated first before executing any statement inside the body of If. The syntax for if statement is as follows:</p>
+<div style="margin-left: 25px;" >
+  <code>
+    if (condition) 
+    <br>   {
+      <br> statments;
+      <br>  }
+   
+</code>
+</div>
+<p></p>
+<p>The condition evaluates to either true or false. True is always a non-zero value, and false is a value that contains zero.
+   Instructions can be a single instruction or a code block enclosed by curly braces { }.</p>
+<p>Following program illustrates the use of if construct in ‘C’ programming:</p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+      <br> int main()
+      <br> {
+        <br>   int num1=1;
+        <br> int num2=2;
+        <br> if(num1<num2)		//test-condition
+        <br>     {
+          <br>    printf("num1 is smaller than num2");
+          <br>  }
+          <br>  return 0;
+          <br>  }
+          <br>
+          <br>
+          Output: num1 is smaller than num2
+</code>
+</div>
+<p></p>
+
+<p> <p><h4 class="headerr">The If-Else statement</h4></p></p>
+<p>The if-else is statement is an extended version of If. The general form of if-else is as follows:</p>
+<div style="margin-left: 25px;" >
+  <code>
+     if (test-expression)
+  <br>      {
+    <br>        True block of statements
+    <br>    }
+    <br>    Else
+    <br>  {
+      <br>       False block of statements
+      <br>   }
+      <br>   Statements;
+</code>
+</div>
+<p></p>
+<p>in this type of a construct, if the value of test-expression is true, then the true block of statements will be executed. If the value of test-expression if false, then the false block of statements will be executed. In any case, after the execution, the control will be automatically transferred to the statements appearing outside the block of If.</p>
+<p>We will initialize a variable with some value and write a program to determine if the value is less than ten or greater than ten.</p>
+<p>Let’s start.</p>
+
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+      <br> int main()
+      <br> {
+        <br>   int num=19;
+        <br>  if(num<10)
+        <br> {
+          <br>     printf("The value is less than 10");
+          <br>  }
+          <br> else
+          <br> {
+            <br>  printf("The value is greater than 10");
+            <br> }
+            <br> return 0;
+            <br> }
+          <br>
+          <br>
+          Output: The value is greater than 10
+</code>
+</div>
+<p></p>
+<p> <p><h4 class="headerr">Nested If-else Statements</h4></p></p>
+<p>When a series of decision is required, nested if-else is used. Nesting means using one if-else construct within another one.
+
+  Let’s write a program to illustrate the use of nested if-else.</p>
+
+  <div style="margin-left: 25px;" >
+    <code>
+      #include &#60;stdio.h&#62;
+        <br> int main()
+        <br> {
+          <br>  int num=1;
+        <br>  if(num<10)
+        <br>    {
+          <br>    if(num==1)
+            <br>  {
+              <br>     printf("The value is:%d\n",num);
+              <br>   }
+            <br>   else
+            <br>  {
+              <br>   printf("The value is greater than 1");
+              <br>  }
+            <br> }
+            <br>  else
+            <br> {
+            <br>   printf("The value is greater than 10");
+            <br> }
+            <br>  return 0;
+            <br>  }
+          
+        <br>
+            <br>
+            Output: The value is:1
+  </code>
+  </div>
+  <p></p>
+<p>The above program checks if a number is less or greater than 10 and prints the result using nested if-else construct.
+
+</p>
+<div style="margin-left: 25px;" >
+<li>Firstly, we have declared a variable num with value as 1. Then we have used if-else construct.</li>
+<li>In the outer if-else, the condition provided checks if a number is less than 10. If the condition is true then and only then it will execute the inner loop. In this case, the condition is true hence the inner block is processed.</li>
+<li>In the inner block, we again have a condition that checks if our variable contains the value 1 or not. When a condition is true, then it will process the If block otherwise it will process an else block. In this case, the condition is true hence the If a block is executed and the value is printed on the output screen.
+ </li>
+<li> The above program will print the value of a variable and exit with success.</li>
+</div>
+<p> <p><h4 class="headerr">if else-if statement:- </h4></p></p>
+<p>Nested else-if is used when multipath decisions are required.</p>
+<p>The general syntax of how else-if ladders are constructed in ‘C’ programming is as follows:</p>
+<div style="margin-left: 25px;" >
+  <code>
+    if (test - expression 1) {
+      statement1;
+  } else if (test - expression 2) {
+      Statement2;
+  } else if (test - expression 3) {
+      Statement3;
+  } else if (test - expression n) {
+      Statement n;
+  } else {
+      default;
+  }
+  Statement x;
+</code>  
+</div>
+<p></p>
+<p>This type of structure is known as the else-if ladder. This chain generally looks like a ladder hence it is also called as an else-if ladder. The test-expressions are evaluated from top to bottom. Whenever a true test-expression if found, statement associated with it is executed. When all the n test-expressions becomes false, then the default else statement is executed.</p>
+<p>Let us see the actual working with the help of a program.</p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+      <br> int main()
+      <br> {
+        <br>  int marks=83;
+        <br>  if(marks>75){
+          <br>    printf("First class");
+          <br>  }
+          <br> else if(marks>65){
+            <br>   printf("Second class");
+            <br> }
+        <br> else if(marks>55){
+          <br> printf("Third class");
+          <br> }
+          <br>else{
+          <br>  printf("Fourth class");
+          <br>}
+          <br>return 0;
+        <br>}
+        
+      <br>
+          <br>
+          Output: First class
+</code>
+</div>
+<p></p>
+<p>The above program prints the grade as per the marks scored in a test. We have used the else-if ladder construct in the above program.</p>
+
+<div style="margin-left: 25px;" >
+  <li>We have initialized a variable with marks. In the else-if ladder structure, we have provided various conditions.</li>
+  <li> The value from the variable marks will be compared with the first condition since it is true the statement associated with it will be printed on the output screen.</li>
+  <li>If the first test condition turns out false, then it is compared with the second condition.
+   </li>
+  <li> This process will go on until the all expression is evaluated otherwise control will go out of the else-if ladder, and default statement will be printed.</li>
+  </div>
+
+  <p> <p><h3 class="headerr">2.	Looping / iteration Statements:- </h3></p></p>
+<p>Iteration is the process where a set of instructions or statements is executed repeatedly for a specified number of time or until a condition is met. These statements also alter the control flow of the program and thus can also be classified as control statements in C Programming Language.</p>
+<p>Iteration statements are most commonly know as loops. Also the repetition process in C is done by using loop control instruction. There are three types of looping statements:</p>
+<p>A loop basically consists of three parts: initialization, test expression, increment/decrement or update value. For the different type of loops, these expressions might be present at different stages of the loop. Have a look at this flow chart to better understand the working of loops(the update expression might or might not be present in the body of the loop in case break statement is used):</p>
+<div style="margin-left: 25px;" >
+  <li>For Loop</li>
+  <li>While Loop</li>
+  <li>Do-while loop</li>
+  
+  </div>
+<p> <p><h4 class="headerr">For loop :- </h4></p></p>
+<p>For loop is the most commonly used looping technique. The reason why it is so popular is because it has all the three parts of the loop: initialization, test expression, update expression in the same line. The syntax of a for loop is:</p>
+
+<div style="margin-left: 25px;" >
+  <code>
+    for(initialization; test expression; update expression)
+    {
+      //body of loop
+    }
+</code>
+</div>
+<p></p>
+<p>Have a look at this simple for loop program for a better understanding:</p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+      <br> int main()
+ <br>   {
+  <br>     int i;
+  <br>     for (i = 1; i <= 5; i++)
+  <br>      printf("CodinGeek\n");
+  <br>    return 0;
+  <br>  }
+  <br>
+  <br>
+  Output : 
+  <br>ITGEEKHUB
+ <br> ITGEEKHUB
+ <br>ITGEEKHUB
+ <br>ITGEEKHUB
+ <br>ITGEEKHUB
+</code>
+</div>
+<p></p>
+<p>Here we have given the initial value of i as 1(initialization). The test condition is i<=5 and the update expression is i++.
+  Let’s understand how this works. In the beginning, the control goes to the initial condition and assigns the value 1 to i. Now it checks whether 1 <=5 which is true. Since the condition is true the control flows to the body of the loop and prints CodinGeek. As the body ends the control flows back to for again. Now, it updates the value of i(i=2) and checks the condition again whether 2<=5 which stand true again. So the control again flows to the body of the loop and prints CodinGeek again(Note that the control does not go back to the initialization expression in the next iteration).
+  Similarly, the process continues for values of i =3, 4 and 5. When i becomes equal to 6, the condition i<=5 becomes false and the loop terminates and the program ends.
+  
+  </p>
+  <p> <p><h3 class="headerr">Different Types of for loop :- </h3></p></p>
+
+<p>For loops can also be of different types, let’s have a look at some of them:</p>
+<p> <p><h4 class="headerr">Infinite for loop:- </h4></p></p>
+<p>An infinite for loop is the one which goes on repeatedly for infinite times. This can happen in two cases:</p>
+<p><u>When the loop has no expressions.</u></p>
+<div style="margin-left: 25px;" >
+  <code>
+    for(;;)
+  <br>  {
+  <br>    printf("ITGEEKHUB");
+   <br> }
+</code>
+</div>
+<p></p>
+<p>The above code runs infinite times because there is no test expression to terminate the loop. Hence, CodinGeek gets printed infinite times.</p>
+<br>
+<p><u>When the test condition never becomes false.</u></p>
+<div style="margin-left: 25px;" >
+  <code>
+    for(i=1;i<=5;)
+    <br>{
+      <br> printf("ITGEEKHUB");
+      <br>}
+</code>
+</div>
+<p></p>
+<p>in the above case, the statement ITGEEKHUB gets printed infinite times because the test condition never becomes false. The value of i remains the same because it is never updated and thus the value of i remains smaller than 5 for each iteration.</p>
+<p> <p><h4 class="headerr">Empty For Loop:- </h4></p></p>
+<p>An empty for loop is the one which has got no body. In simple words, it contains no statements or expressions in its body. It can be used for time-consuming purposes. Each iteration takes its own time for compilation and execution. Usually, it is too small to be of any significant importance. Here’s the syntax of an empty for loop:</p>
+<div style="margin-left: 25px;" >
+  <code>
+    for(i=1;i<=5;i++)
+   <br> {}
+</code>
+</div>
+<p></p>
+<p> <p><h4 class="headerr">Nested For Loop:- </h4></p></p>
+<p>In the previous tutorial of if-else control statements we saw what nested if is. Similarly, nested for loop refers to the process of having one loop inside another loop. We can have multiple loops inside one another. The body of one ‘for’ loop contains the other and so on. The syntax of a nested for loop is as follows(using two for loops):</p>
+<div style="margin-left: 25px;" >
+  <code>
+    for(initialization; test; update) 
+    <br>   {
+      <br>     for(initialization;test;update)//using another variable
+      <br>   {
+        <br>    //body of the inner loop
+        <br>  }
+        <br>  //body of outer loop(might or might not be present)
+        <br>  } 
+</code>
+</div>
+<p></p>
+<p>The following program will illustrate the use of nested loops:</p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+      <br> int main()
+      <br> {
+        <br> int i, j;
+        <br>  for (i = 1; i <= 5; i++)
+        <br>  {
+        <br>    for (j = 1; j <= i; j++)
+        <br>    printf("%d", j);
+        <br>  printf("\n");
+        <br> }
+      <br> return 0;
+    }
+  <br>
+  <br>
+  Output : 
+  <br>1
+ <br> 12
+ <br>123
+ <br>1234
+ <br>12345
+</code>
+</div>
+<p></p>
+<p>This program prints a triangular pattern. Now, the outer loop starts with i=1 and checks the condition whether i<= 5 is true or not which is true so the control goes on the body which contains another loop.
+  This loop starts with the initial value as j=1 and checks if j<=i which is true and hence prints the value of j. In the next iteration, the condition of the inner loop becomes false and the control exits the inner loop and changes the line. Now it goes for the next iteration of the outer loop and the process goes on..unless the condition becomes false and the loop terminates and the program ends.</p>
+ 
+ <br> <p> <p><h4 class="headerr">while loop :- </h4></p></p>
+ <p>A while loop is very similar to a repeating if statement. It executes a certain block of statements based on a certain condition present at the beginning of the loop. If the condition returns boolean true the loop block is executed, otherwise not.
+  A while loop has its <b>test condition</b>  at the beginning of the loop. Its <b>initialization</b> is done before the loop and the update condition is present in the body of the loop. </p>
+<p>Here is the syntax of a while loop:</p>
+<div style="margin-left: 25px;" >
+  <code>
+    initialization;
+    <br>while(test condition)
+    <br>{
+      <br>//body of the loop
+  <br> update expression;
+  <br>}
+</code>
+</div>
+<p></p>
+<p>Have a look at this simple program to understand how while loop works:</p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+      <br> int main()
+      <br> {
+        <br> int i = 1;
+        while (i <= 5) {
+          printf("ITGEEKHUB\n");
+          i++;
+        }
+        return 0;
+      }
+    
+  <br>
+  <br>
+  Output : 
+  <br>ITGEEKHUB
+ <br> ITGEEKHUB
+ <br>ITGEEKHUB
+ <br>ITGEEKHUB
+ <br>ITGEEKHUB
+</code>
+</div>
+<p></p>
+<p>This program does the same thing as the program with the for loop. But the syntax of the while loop differs a lot.</p>
+<p> <p><h3 class="headerr">Different Types of while loop :- </h3></p></p>
+<p>Like for loop, while loop can also be categorized into an infinite while loop, empty while loop, and nested while loop.</p>
+<p> <p><h4 class="headerr">Infinite while loop:- </h4></p></p>
+<p>The while loop that keeps repeating itself an infinite number of times is known as an infinite while loop. When the condition of the while loop never turns false(no termination of the loop), it keeps repeating itself infinite times. unlike for loop, if we do not give any test condition to the while loop, it shows an error. Here’s an example: Here we do not give any update expression for the counter so the test condition never turns false.
+</p>
+<div style="margin-left: 25px;" >
+  <code>
+    int i=1;
+  <br>  while(i<=5)
+  <br>  {
+    <br>   printf("ITGEEKHUB\n");
+      <br> }
+</code>
+</div>
+<p></p>
+<p>The above program prints ITGEEKHUB an infinite number of times.</p>
+<p> <p><h4 class="headerr">Empty while loop:- </h4></p></p>
+
+<p>An empty while loop is the one that does not have any statement or expression in its body(except the update expression). Here’s an example:</p>
+<div style="margin-left: 25px;" >
+  <code>
+
+  <br>  int i=1;
+  <br> while(i<=5)
+  <br> {
+    <br>i++;
+    <br> }
+</code>
+</div>
+<p></p>
+<p> <p><h4 class="headerr">Nested While loop:- </h4></p></p>
+<p>A nested while loop is one that contains one or more than one loop inside its body.
+  Here is an example of a nested while loop.</p>
+  <div style="margin-left: 25px;" >
+    <code>
+      #include &#60;stdio.h&#62;
+        <br> int main()
+        <br> {
+          int i = 1, j;
+          <br> while (i <= 3) {
+            <br>  j = 1;
+            <br>  while (j <= 2) {
+              <br>   printf("ITGEEKHUB\n");
+              <br>  j++;
+              <br>}
+              <br> printf("-----\n");
+              <br> i++;
+              <br>}
+              <br>return 0;
+              <br>}
+    <br>
+    <br>
+    Output : 
+    <br>ITGEEKHUB
+   <br> ITGEEKHUB
+   <br>
+   -----
+  
+   <br>ITGEEKHUB
+   <br>ITGEEKHUB
+   <br>
+   -----
+  
+   <br>ITGEEKHUB
+   <br>ITGEEKHUB
+  </code>
+  </div>
+  <p></p>
+  <p>In this program, we see that every time the inner loop is executed it prints ITGEEKHUB twice (as specified in the inner loop test condition). As it exits the inner loop it goes to the outer loop and prints —– . This process is repeated thrice (specified in the outer loop test condition).</p>
+
+  <p>One point to be kept in consideration while writing a nested while loop is that the initialization of the inner loop should also be inside the outer loop. The typical error that people make while writing nested loops is that they initialize the inner loop counter outside the outer loop body. Here’s the error example:
+
+  </p>
+  <div style="margin-left: 25px;" >
+    <code>
+      #include &#60;stdio.h&#62;
+        <br> int main()
+        <br> {
+          <br>  int i = 1, j = 1;
+          <br>  while (i <= 3) {
+            <br>  while (j <= 2) {
+              <br>   printf("CodinGeek\n");
+              <br>   j++;
+              <br>}
+            <br> printf("-----\n");
+            <br> i++;
+            <br> }
+          <br>  return 0;
+          <br> }
+    <br>
+    <br>
+    Output : 
+    <br>ITGEEKHUB
+   <br> ITGEEKHUB
+   <br>
+   -----
+   <br>
+   -----
+   <br>
+   -----
+   <br>
+  </code>
+  </div>
+  <p></p>
+  <p> <p><h2 class="headerr">For loop vs While loop in C:- </h2></p></p>
+<p>Despite both being entry-controlled loops,i.e., having the test condition before the body of the loop, they differ in many aspects. Here are some important differences between For loop and the While loop.</p>
+<div>
+  <li>The main point of difference between the two is their syntax which we have already seen. The position of the three parts of the loop differs for both.</li>
+<li>For loops are used generally when the number of iterations is already known to us. Whereas a while loop can be used in both cases, i.e, known or the unknown number of iterations. We have a slight idea of the number of iterations in case of a while loop.</li>
+<li>In case the test condition is not specified in for loop, the loop will run infinite times. Whereas, a while loop without a condition will return an error message.
+</li>
+</div>
+<br> <p> <p><h4 class="headerr">do-while loop :- </h4></p></p>
+<p>The Do-while loop is an exit controlled loop. In simple words, the test condition is present after the body of the loop.The special feature of a do-while loop is that it executes the body of the loop at least once even if the condition is false.A do-while loop is very similar to a while loop except that it is an exit controlled loop. Here is the syntax of a do-while loop:</p>
+<div style="margin-left: 25px;" >
+  <code>
+
+  <br> initialization;
+  <br> do
+  <br> {
+    <br>  //body of the loop
+    <br> update expression;
+    <br> }while(test condition);
+</code>
+</div>
+<p></p>
+<p>In the syntax, we can clearly see that once all the statements inside 
+  the loop are executed the control flows to the while test condition.
+<br>A very similar program to the one seen in for loop and  while loop in the previous tutorials using do-while loop:</p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+      <br> int main()
+      <br> {
+        <br>   int i = 1;
+        <br>  do {
+          <br>    printf("CodinGeek\n");
+          <br>    i++;
+          <br> } while (i == 0);
+          <br> return 0;
+          <br>}
+  <br>
+  <br>
+  Output : 
+  <br>ITGEEKHUB
+</code>
+</div>
+<p></p>
+<p>The first thing we see here is that the while test condition is false. But the body still gets executed and prints ITGEEKHUB once</p>
+<p> <p><h3 class="headerr">Different Types of do-while loop :- </h3></p></p>
+<p>We already saw the classification in for loop and while loop. Do-while loop also has the following types:</p>
+<p> <p><h4 class="headerr">Infinite do-while loop:- </h4></p></p>
+<p>A do-while loop that has an infinite number of iterations is known as an infinite do-while loop. The test condition of the do-while loop never turns false. Here is one example:</p>
+<div style="margin-left: 25px;" >
+  <code>
+
+    int i=1;
+  <br>  do
+  <br>  {
+   <br>   printf("ITGEEKHUB\n");
+   <br> }while(i<=5);
+</code>
+</div>
+<p></p>
+<p>This program prints ITGEEKHUB infinite number of times because the while test condition never turns false. If we leave the while test condition blank, we get a compilation error.</p>
+<p> <p><h4 class="headerr">Empty do-while loop:- </h4></p></p>
+<p>An empty do-while loop is the one that does not have anything in it’s body. Here’s an example:</p>
+<div style="margin-left: 25px;" >
+  <code>
+
+    int i=1;
+    <br>  do{
+      <br> }while(++i<=5);
+</code>
+</div>
+<p></p>
+<p>This program does not give any output as we see that there are no statements inside the loop body. The counter updates itself in the while test condition.</p>
+<p> <p><h4 class="headerr">Empty do-while loop:- </h4></p></p>
+<p> As we saw earlier a nested loop is the one which has one or more loops inside its body.A nested do-while loop also has one or more than one loop inside its body. Here is an example:</p>
+
+    <div style="margin-left: 25px;" >
+      <code>
+        #include &#60;stdio.h&#62;
+          <br> int main()
+          <br> {
+            <br> int i = 1, j;
+            <br>  do {
+              <br>   j = 1;
+              <br>   do {
+                <br>    printf("CodinGeek\n");
+                <br>  } while (++j <= 2);
+                <br>  printf("-----\n");
+                <br> } while (++i <= 3);
+                <br>  return 0;
+                <br>  }
+      <br>
+      <br>
+      Output : 
+      <br>ITGEEKHUB
+     <br> ITGEEKHUB
+     <br>
+     -----
+    
+     <br>ITGEEKHUB
+     <br>ITGEEKHUB
+     <br>
+     -----
+    
+     <br>ITGEEKHUB
+     <br>ITGEEKHUB
+    </code>
+    </div>
+    <p></p>
+</code>
+</div>
+<p></p>
+
+
+<p> <p><h2 class="headerr">For Loop vs Do-while Loop</h2></p></p>
+<div style="margin-left: 25px;">
+<li>For loop is an entry controlled loop, that is, the test condition is present before the body of the loop. Whereas, do-while loop is an exit controlled loop, that is, the test condition is present after the body of the loop.</li>
+  <li>For loop and do-while loop differ a lot in its syntax. The three parts of the loop are placed at different positions of the loop.</li>
+ <li> For loop will terminate immediately if the test condition is false. Whereas, do-while loop will execute at least once even if the condition is false.</li>
+</div>
+
+<p> <p><h2 class="headerr">While Loop vs Do-while Loop</h2></p></p>
+<div style="margin-left: 25px;">
+<li>While loop is an entry controlled loop, that is, the test condition is present before the body of the loop. Whereas, do-while loop is an exit controlled loop, that is, the test condition is present after the body of the loop.</li>
+<li>While loop will terminate immediately if the test condition is false. Whereas, do-while loop will execute at least once even if the condition is false.</li>
+</div>
+
+
+<br> <p> <p><h3 class="headerr">3. Switch statements :- </h3></p></p>
+<p>Switch statements are also decision-making statements that choose to execute a particular block of statements from many cases that have been provided in the code by the programmer. So let’s get started and understand switch statements in detail in C language.</p>
+
+<p>It is also known as switch-case-default. These programs are menu-driven, i.e., it compares the value to the case values and executes the statements of the case that matches.</p>
+<p>The three keywords used are switch, case, and default.They are used to make up the whole switch-case-default structure.</p>
+<p>Let us have a look at this simple switch-case-default program which will help us get a better understanding:</p>
+
+    <div style="margin-left: 25px;" >
+      <code>
+        #include &#60;stdio.h&#62;
+          <br> int main()
+          <br> {
+            <br>  int ch, a = 16, b = 5;
+            <br>   double result = 0.0;
+            <br>   printf("Enter 1 for addition, 2 for subtraction, 3 for multiplication and 4 "
+            <br>      "for division :\n");
+            <br> scanf("%d", &ch);
+            <br> switch (ch) {
+              <br>  case 1:
+              <br> result = 16 + 5;
+              <br>   printf("The sum is: %f \n", result);
+              <br> break;
+              <br>  case 2:
+              <br>  result = 16 - 5;
+              <br>   printf("The difference is: %f \n", result);
+              <br>  break;
+              <br>  case 3:
+              <br>  result = 16 * 5;
+              <br>  printf("The product is: %f \n", result);
+              <br> break;
+              <br>case 4:
+              <br>result = 16 / 5;
+              <br>printf("The quotient is: %f \n", result);
+              <br> break;
+              <br>default:
+              <br>printf("Wrong Choice\n");
+              <br>}
+              <br> return 0;
+              <br>}
+      <br>
+      <br>
+      Output : 
+     <br> Enter 1 for addition, 2 for subtraction, 3 for multiplication and 4 for division : 
+     <br> 2
+     <br> The difference is : 11.0000
+    </code>
+    </div>
+    <p></p>
+</code>
+</div>
+<p></p>
+<br> <p> <p><h4 class="headerr">Guidelines for Switch-Case in C :- </h4></p></p>
+<div style="margin-left: 25px;" >
+
+<li>Cases can have integer values as well as char values for comparison and is followed by a colon(:).</li>
+<li>The first thing to be kept in mind before writing a switch-case program is that a Switch statement in C can have any number of cases and they do not necessarily need to be arranged alphabetically or in the numerical order.</li>
+<li>The different cases should be separated by the break statement otherwise the control will flow from one case to the other. This is known as fall through i.e. if a case is matched then it will execute the code of all cases below it until it finds a break statement or switch statement ends.</li>
+<li>If we need to execute multiple statements in a case, we do not need to put the statement in blocks. The statements will get executed sequentially unless a break is encountered.</li>
+<li>A Switch-Case statement may or may not have a default statement. If it doesn’t have a default statement the control will automatically go out of the switch scope and the next statement will be executed.</li>
+<li>If a statement is written outside a case, it won’t be reported as an error. It won’t get executed because the statements inside switch get executed only if a case is matched.</li>
+<li>A switch can also occur inside a switch which is known as nested switch but in practice, it is hardly implemented.</li>
+
+</div>
+<br> <p> <p><h4 class="headerr">break and default statements :- </h4></p></p>
+<p>A break statement is used in switch-case at the end of a case. It terminates the case and takes the control outside of the switch block when encountered.</p>
+<p>If a case does not have a break at the end, the control flows to the next case or default statement. This is known as fall through(explained above).</p>
+<p>Let us see how break works and also fall through in the following program:</p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+      <br> int main()
+      <br> {
+        int ch;
+  printf("Enter 1 for square, 2 for triangle, 3 for rectangle and 4 for circle "
+         ":\n");
+  scanf("%d", &ch);
+  switch (ch) {
+  case 1:
+    printf("You chose Square\n");
+    break;
+  case 2:
+    printf("You chose Triangle\n");
+  case 3:
+    printf("You chose Rectangle\n");
+    break;
+  case 4:
+    printf("You chose Circle\n");
+    break;
+  default:
+    printf("Wrong Choice\n");
+  }
+  return 0;
+}
+  <br>
+  <br>
+
+  <b>The number entered is 1.</b>
+  Output : 
+ <br> You chose square
+ 
+</code>
+</div>
+<p></p>
+
+<p></p>
+<p>When we enter 2. We see a fall through of control between cases and the case 3 is also executed because of the absence of break.</p>
+<div style="margin-left: 25px;" >
+  <code>
+   
+  Output : 
+ <br> You chose Triangle
+ <br>  You chose Rectangle
+ 
+</code>
+</div>
+<p></p>
+<p><b>Default statement</b> in switch-case is executed when none of the cases matches. It is written in the same way as a case and is usually written at the end of the switch block. It does not need to be followed by a break statement. If the default statement is missing then the program won’t show any error but if none of the cases match the control will directly flow outside the switch block. In the above program of we enter 6, we get the output as:</p>
+<div style="margin-left: 25px;" >
+  <code>
+   
+  Output : 
+ <br>Wrong Choice
+ 
+</code>
+</div>
+<p></p>
+<p> <p><h2 class="headerr">Switch-Case vs If-Else</h2></p></p>
+<div style="margin-left: 25px;" >
+<li>We cannot use variable expressions in switch like case x+5: or case i>7: , whereas if can have expressions like this.</li>
+<li>Switch is a more structured when it comes to programming, also the level of indentation is manageable when compared to if-else.</li>
+<li>One case cannot have the same expression as the other one.</li>
+<li>Switch can only take numerical or character values for testing, it cannot have a float expression.</li>
+<li>If there are many cases to be compared then using switch-case is more convenient.</li>
+</div>
+
+<p> <p><h3 class="headerr">4.	Jump Statements in C – break, continue, goto, return :- </h3></p></p>
+<p>Jump Statement makes the control jump to another section of the program unconditionally when encountered. It is usually used to terminate the loop or switch-case instantly. It is also used to escape the execution of a section of the program.</p>
+<p>There are 4 jump statements offered by C Programming Language:</p>
+<div style="margin-left: 25px;" >
+<li>Break</li>
+<li>Continue</li>
+<li>Goto</li>
+<li>Return</li>
+</div>
+<br> <p> <p><h4 class="headerr">break  statements :- </h4></p></p>
+<p>A break statement is used to terminate the execution of the rest of the block where it is present and takes the control out of the block to the next statement.</p>
+<p>It is mostly used in loops and switch-case to bypass the rest of the statement and take the control to the end of the loop. The use of the break keyword in switch-case has been explained in the previous tutorial Switch – Control Statement.</p>
+<p>Another point to be taken into consideration is that the break statement when used in nested loops only terminates the inner loop where it is used and not any of the outer loops.</p>
+<p>Let’s implement an example to understand how break statement works in C language.</p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+      <br> int main()
+      <br> {
+        <br> int i;
+        <br>for (i = 1; i <= 15; i++) {
+          <br>printf("%d\n", i);
+     <br>if (i == 10)
+    <br>   break;
+    <br>}
+    <br>return 0;
+    <br>}
+  <br>
+  <br>
+
+ 
+  Output : 
+  <br> 1
+  <br> 2
+  <br> 3
+  <br> 4
+  <br> 5
+  <br> 6
+  <br> 7
+  <br> 8
+  <br>9
+  <br> 10
+ 
+</code>
+</div>
+<p></p>
+
+<p></p>
+<p>When we enter 2. We see a fall through of control between cases and the case 3 is also executed because of the absence of break.</p>
+<div style="margin-left: 25px;" >
+  <code>
+   
+  Output : 
+ <br> You chose Triangle
+ <br>  You chose Rectangle
+ 
+</code>
+</div>
+<p></p>
+<br> <p> <p><h4 class="headerr">continue  Statement :- </h4></p></p>
+<p>The continue jump statement like any other jump statement interrupts or changes the flow of control during the execution of a program. Continue is mostly used in loops.</p>
+<p>Rather than terminating the loop it stops the execution of the statements underneath and takes control to the next iteration.
+
+  Similar to a break statement, in the case of a nested loop, the continue passes the control to the next iteration of the inner loop where it is present and not to any of the outer loops.</p>
+<p>Let’s implement an example to understand how continue statement works in C language.</p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+      <br> int main()
+      <br> {
+        <br>  int i, j;
+        <br>for (i = 1; i < 3; i++) {
+          <br>for (j = 1; j < 5; j++) {
+            <br> if (j == 2)
+            <br>   continue;
+            <br> printf("%d\n", j);
+            <br> }
+            <br> }
+            <br>return 0;
+            <br>}
+  <br>
+  <br>
+
+ 
+  Output : 
+  <br> 1
+  <br> 2
+  <br> 3
+  <br> 4
+  <br> 5
+  
+ 
+</code>
+</div>
+<p></p>
+
+<p>In this program, we see that the printf() instruction for the condition j=2 is skipped each time during the execution because of continue. We also see that only the condition j=2 gets affected by the continue. The outer loop runs without any disruption in its iteration.</p>
+<br> <p> <p><h4 class="headerr">goto  Statement :- </h4></p></p>
+<p>
+  goto jump statement is used to transfer the flow of control to any part of the program desired. The programmer needs to specify a label or identifier with the goto statement in the following manner:
+</p>
+<p>Let’s implement an example to understand how goto statement works in C language.</p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+      <br> int main()
+      <br> {
+        <br>  int i, j;
+        <br> for (i = 1; i < 5; i++) {
+          <br>  if (i == 2)
+          <br>    goto there;
+          <br>  printf("%d\n", i);
+          <br> }
+          <br> there:
+        <br>   printf("Two");
+        <br> return 0;
+        <br>  }
+  <br>
+  <br>
+
+ 
+  Output : 
+  <br> 1
+  <br> 
+  Two
+  
+ 
+</code>
+</div>
+<p></p>
+<br> <p> <p><h4 class="headerr">Return Statement:- </h4></p></p>
+<p>Return jump statement is usually used at the end of a function to end or terminate it with or without a value. It takes the control from the calling function back to the main function(main function itself can also have a return).</p>
+<p>An important point to be taken into consideration is that return can only be used in functions that is declared with a return type such as int, float, double, char, etc.
+
+ <p> The functions declared with void type does not return any value. Also, the function returns the value that belongs to the same data type as it is declared. Here is a simple example to show you how the return statement works.</p>
+
+<p>Let’s implement an example to understand return statement in C language.</p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+    <br> char func(int ascii) {
+      <br>   return ((char) ascii);
+      <br> }
+      <br>int main() {
+        <br>  int ascii;
+        <br>  char ch;
+        <br>  printf("Enter any ascii value in decimal: \n");
+        <br> scanf("%d", & ascii);
+        <br> ch = func(ascii);
+        <br>printf("The character is : %c", ch);
+      <br> return 0;
+      <br>}
+    <br><br>
+  <br>
+
+ 
+  Output : 
+  <br>Enter any ascii value in decimal: 
+  <br> 110
+  <br>The character is : n
+  
+  
+ 
+</code>
+</div>
+<p></p>
+<p>In this program, we have two functions that have a return type but only one function is returning a value[func()] and the other is just used to terminate the function[main()].
+
+  The function func() is returning the character value of the given number(here 110). We also see that the return type of func() is char because it is returning a character value.
+  
+  The return in main() function returns zero because it is necessary to have a return value here because main has been given the return type int.</p>
 
 
 
@@ -100,6 +1002,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 <!-- Site footer -->
 <footer class="site-footer"  style= "margin-top: 65px;">
     <div class="container">
