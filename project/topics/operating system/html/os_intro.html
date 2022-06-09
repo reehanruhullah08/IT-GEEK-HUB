@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating System</title>
+    <!--css-->
+    <link rel="stylesheet" href="../css/os.css">
+   
+    <!--box icon-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<!--bootstrap-->
+<link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    
+<body class="bgco">
+    
+    <div class="container-fluid">
+        <div class="row">
+<nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebaropen'></i>
+        <span class="logo">
+            <a href="#">IT GeeK HuB</a>
+        </span>
+            <div class="menu">
+              <div class="logo-toggle">
+                <span class="logo">
+                    <a href="#">IT GeeK HuB</a>
+                    </span>
+                    <i class='bx bx-right-arrow-alt sidebarclose'></i>
+              </div>
+
+               <ul class="nav-links">
+                    <li><a href="../../../home.html">Home</a></li>
+                    <li><a href="../../../courses/cousesindex.html">Topics</a></li>
+                    <li><a href="../../../home.html#games">Games</a></li>
+                    <li><a href="../../../possible_question/poss_quest.html">Important Question</a></li>
+                    <li><a href="../../../contact-form-18/index.html">Contact us</a></li>
+                    <li><a href="../../../signin/Login_v5/index.html">Sign up</a></li>
+                  
+                </ul>
+            </div>
+            <div class="darklight-searchbox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun' ></i>
+                </div>
+            </div>
+     </div>
+</nav>
+</div>
+<div class="row "  style= "margin-top: 65px;margin-left: 20px;">
+    <h1 class="headerr">Introduction of Operating System</h1>
+</div>
+
+<p>An operating system acts as an intermediary between the user of a computer and computer hardware. The purpose of an operating system is to provide an environment in which a user can execute programs conveniently and efficiently. </p>
+<p>An operating system is a software that manages computer hardware. The hardware must provide appropriate mechanisms to ensure the correct operation of the computer system and to prevent user programs from interfering with the proper operation of the system. </p>
+<p>An operating system is a software which performs all the basic tasks like file management, memory management, process management, handling input and output, and controlling peripheral devices such as disk drives and printers.</p>
+<p>Some popular Operating Systems include Linux Operating System, Windows Operating System, VMS, OS/400, AIX, z/OS, etc.</p>
+
+<p> <p><h3 class="headerr">Definition : </h3></p></p>
+<p>An operating system is a program that acts as an interface between the user and the computer hardware and controls the execution of all kinds of programs.</p>
+<p>An operating system is a program that controls the execution of application programs and acts as an interface between the user of a computer and the computer hardware.</p>
+
+<p> <p><h3 class="headerr">Functions of Operating system : </h3></p></p>
+<p>Following are some of important functions of an operating System.
+
+</p>
+<div style="margin-left: 25px;">
+<li>Memory Management</li>
+<li>Processor Management</li>
+<li>Device Management</li>
+<li>File Management</li>
+<li>Security</li>
+<li>Control over system performance</li>
+<li>Job accounting</li>
+<li>Error detecting aids</li>
+<li>Coordination between other software and users</li>
+</div>
+<br>
+
+<p> <p><h4 class="headerr">Memory Management : </h4></p></p>
+<p>Memory management refers to management of Primary Memory or Main Memory. Main memory is a large array of words or bytes where each word or byte has its own address</p>
+<p>Main memory provides a fast storage that can be accessed directly by the CPU. For a program to be executed, it must in the main memory. An Operating System does the following activities for memory management −</p>
+<div style="margin-left: 25px;">
+    <li>Keeps tracks of primary memory, i.e., what part of it are in use by whom, what part are not in use.</li>
+    <li>In multiprogramming, the OS decides which process will get memory when and how much.</li>
+    <li>Allocates the memory when a process requests it to do so.</li>
+    <li>De-allocates the memory when a process no longer needs it or has been terminated.
+    </li>
+    
+    </div>
+    <br>
+
+    <p> <p><h4 class="headerr">Processor Management  : </h4></p></p>
+
+<p>In multiprogramming environment, the OS decides which process gets the processor when and for how much time. This function is called process scheduling. An Operating System does the following activities for processor management −</p>
+
+<div style="margin-left: 25px;">
+    <li>Keeps tracks of processor and status of process. The program responsible for this task is known as traffic controller.</li>
+    <li>Allocates the processor (CPU) to a process.</li>
+    <li>De-allocates processor when a process is no longer required.</li>
+    
+    
+    </div>
+    <br>
+    <p> <p><h4 class="headerr">Device Management : </h4></p></p>
+
+    <p>An Operating System manages device communication via their respective drivers. It does the following activities for device management −</p>
+    
+    <div style="margin-left: 25px;">
+        <li>Keeps tracks of all devices. Program responsible for this task is known as the I/O controller.</li>
+        <li>Decides which process gets the device when and for how much time.</li>
+        <li>Allocates the device in the efficient way.</li>
+        <li>De-allocates devices</li>
+        
+        </div>
+        <br>
+    
+ <p> <p><h4 class="headerr">File Management : </h4></p></p>
+
+<p>A file system is normally organized into directories for easy navigation and usage. These directories may contain files and other directions.</p>
+   <p>An Operating System does the following activities for file management −</p>     
+        <div style="margin-left: 25px;">
+            <li> Keeps track of information, location, uses, status etc. The collective facilities are often known as file system.</li>
+            <li>Decides who gets the resources.</li>
+            <li>Allocates the resources.</li>
+            <li>De-allocates the resources.</li>
+              </div>
+            <br>
+  
+     <p> <p><h4 class="headerr">Security : </h4></p></p>
+  <p>By means of password and similar other techniques, it prevents unauthorized access to programs and data.</p>
+    
+  <p> <p><h4 class="headerr">Control over system performance : </h4></p></p>
+<p>Recording delays between request for a service and response from the system.</p>
+
+<p> <p><h4 class="headerr">Job accounting : </h4></p></p>
+<p>Keeping track of time and resources used by various jobs and users.</p>
+
+<p> <p><h4 class="headerr">Error detecting aids : </h4></p></p>
+<p> Production of dumps, traces, error messages, and other debugging and error detecting aids.</p>
+
+<p> <p><h4 class="headerr">Coordination between other softwares and users : </h4></p></p>
+<p>Coordination and assignment of compilers, interpreters, assemblers and other software to the various users of the computer systems.</p>
+
+<p>Every computer must have an operating system to run other programs. The operating system coordinates the use of the hardware among the various system programs and application programs for various users. It simply provides an environment within which other programs can do useful work. </p>
+<p>The operating system is a set of special programs that run on a computer system that allows it to work properly. It performs basic tasks such as recognizing input from the keyboard, keeping track of files and directories on the disk, sending output to the display screen, and controlling peripheral devices. 
+</p>
+
+<p> <p><h3 class="headerr">I/O System Management –  : </h3></p></p>
+<p>The module that keeps track of the status of devices is called the I/O traffic controller. Each I/O device has a device handler that resides in a separate process associated with that device. </p>
+<p>The I/O subsystem consists of </p>
+
+<div style="margin-left: 25px;">
+    <li>  A memory Management component that includes buffering caching and spooling.</li>
+    <li>A general device driver interface.     
+    </li>
+     </div>
+    <br>
+<p>Drivers for specific hardware devices. </p>
+
+<p> <p><h4 class="headerr">Assembler   –  : </h4></p></p>
+<p>The input to an assembler is an assembly language program. The output is an object program plus information that enables the loader to prepare the object program for execution. At one time, the computer programmer had at his disposal a basic machine that interpreted, through hardware, certain fundamental instructions. He would program this computer by writing a series of ones and Zeros (Machine language), place them into the memory of the machine. </p>
+
+<p> <p><h4 class="headerr">Compiler –   : </h4></p></p>
+<p>The High-level languages- examples are FORTRAN, COBOL, ALGOL, and PL/I are processed by compilers and interpreters. A compiler is a program that accepts a source program in a “high-level language “and produces a corresponding object program. An interpreter is a program that appears to execute a source program as if it was machine language. The same name (FORTRAN, COBOL, etc.) is often used to designate both a compiler and its associated language. </p>
+
+<p> <p><h4 class="headerr">Loader  –   : </h4></p></p>
+<p>A Loader is a routine that loads an object program and prepares it for execution. There are various loading schemes: absolute, relocating, and direct-linking. In general, the loader must load, relocate and link the object program. The loader is a program that places programs into memory and prepares them for execution. In a simple loading scheme, the assembler outputs the machine language translation of a program on a secondary device and a loader places it in the core. The loader places into memory the machine language version of the user’s program and transfers control to it. Since the loader program is much smaller than the assembler, those make more core available to the user’s program. </p>
+
+<p> <p><h2 class="headerr">History Of OS </h2></p></p>
+<div style="margin-left: 25px;">
+    <li> Operating systems were first developed in the late 1950s to manage tape storage</li>
+    <li>The General Motors Research Lab implemented the first OS in the early 1950s for their IBM 701</li>
+<li>In the mid-1960s, operating systems started to use disks</li>
+<li>In the late 1960s, the first version of the Unix OS was developed</li>
+<li>The first OS built by Microsoft was DOS. It was built in 1981 by purchasing the 86-DOS software from a Seattle company</li>
+<li>The present-day popular OS Windows first came to existence in 1985 when a GUI was created and paired with MS-DOS</li>
+
+</div>
+    <br>
+  
+ <p> <p><h2 class="headerr">Types of Operating System </h2></p></p>   
+
+ <div style="margin-left: 25px;">
+    <li><b>Batch Operating System- </b> Sequence of jobs in a program on a computer without manual interventions.</li>
+    <li><b>Time-sharing/ Multitasking operating System-</b>   allows many users to share the computer resources. (Max utilization of the resources).</li>
+<li> <b>Distributed operating System-</b> Manages a group of different computers and makes appear to be a single computer.</li>
+<li><b> Network operating system-</b> computers running in different operating systems can participate in a common network (It is used for security purposes).</li>
+<li><b>Real-time operating system –</b> meant applications to fix the deadlines.</li>
+
+
+</div>
+    <br>
+    
+    <p> <p><h4 class="headerr">Batch Operating System  : </h4></p></p>
+   
+   <p>This type of operating system does not interact with the computer directly. There is an operator which takes similar jobs having the same requirement and group them into batches. It is the responsibility of the operator to sort jobs with similar needs. </p>
+    <img src="../images/batchos.jpg" alt="">
+<br>
+    <p>Advantages of Batch Operating System: </p>
+    <div style="margin-left: 25px;">
+        <li>It is very difficult to guess or know the time required for any job to complete. Processors of the batch systems know how long the job would be when it is in queue</li>
+    <li> Multiple users can share the batch systems</li>
+    <li>The idle time for the batch system is very less</li>
+    <li>It is easy to manage large work repeatedly in batch systems</li>
+    </div>
+    <br>
+    <p>Disadvantages of Batch Operating System:   </p>
+    <div style="margin-left: 25px;">
+        <li>The computer operators should be well known with batch systems</li>
+    <li> Batch systems are hard to debug</li>
+    <li> It is sometimes costly</li>
+    <li>The other jobs will have to wait for an unknown time if any job fail</li>
+    
+</div>
+<br>
+<p><p>Examples of Batch based Operating System: Payroll System, Bank Statements, etc. </p>
+</p>
+
+<br>
+
+
+<p> <p><h4 class="headerr">Time-Sharing Operating Systems   : </h4></p></p>
+<p>Each task is given some time to execute so that all the tasks work smoothly. Each user gets the time of CPU as they use a single system. These systems are also known as Multitasking Systems. The task can be from a single user or different users also. The time that each task gets to execute is called quantum. After this time interval is over OS switches over to the next task. </p>
+
+
+<p>Advantages of Time-Sharing OS:   </p>
+<div style="margin-left: 25px;">
+    <li>Each task gets an equal opportunity</li>
+<li> Fewer chances of duplication of software</li>
+<li>CPU idle time can be reduced</li>
+
+</div>
+
+
+
+<br>
+<p>Disadvantages of Time-Sharing OS:    </p>
+<div style="margin-left: 25px;">
+    <li>Reliability problem</li>
+<li> One must have to take care of the security and integrity of user programs and data</li>
+<li> It is sometimes costly</li>
+<li>Data communication problem</li>
+
+</div>
+<br>
+<p>Examples of Time-Sharing OSs are: Multics, Unix, etc. </p>
+
+
+<p> <p><h4 class="headerr">Distributed Operating System –    : </h4></p></p>
+<p>These types of the operating system is a recent advancement in the world of computer technology and are being widely accepted all over the world and, that too, with a great pace. Various autonomous interconnected computers communicate with each other using a shared communication network. Independent systems possess their own memory unit and CPU. These are referred to as loosely coupled systems or distributed systems. These system’s processors differ in size and function. The major benefit of working with these types of the operating system is that it is always possible that one user can access the files or software which are not actually present on his system but some other system connected within this network i.e., remote access is enabled within the devices connected in that network.  </p>
+
+
+<p>Advantages of Distributed Operating System:     </p>
+<div style="margin-left: 25px;">
+    <li>Failure of one will not affect the other network communication, as all systems are independent from each other</li>
+<li> Electronic mail increases the data exchange speed</li>
+<li>Since resources are being shared, computation is highly fast and durable</li>
+<li>Load on host computer reduces</li>
+<li>These systems are easily scalable as many systems can be easily added to the network</li>
+<li>Delay in data processing reduces</li>
+</div>
+
+<br>
+<p>Disadvantages of Distributed Operating System:      </p>
+<div style="margin-left: 25px;">
+    <li>Failure of the main network will stop the entire communication</li>
+<li> To establish distributed systems the language which is used are not well defined yet</li>
+<li> It is sometimes costly</li>
+<li>These types of systems are not readily available as they are very expensive. Not only that the underlying software is highly complex and not understood well yet</li>
+
+</div>
+<br>
+<p>Examples of Distributed Operating System are- LOCUS, etc. </p>
+
+
+<p> <p><h4 class="headerr">Network Operating System –     : </h4></p></p>
+<p>These systems run on a server and provide the capability to manage data, users, groups, security, applications, and other networking functions. These types of operating systems allow shared access of files, printers, security, applications, and other networking functions over a small private network. One more important aspect of Network Operating Systems is that all the users are well aware of the underlying configuration, of all other users within the network, their individual connections, etc. and that’s why these computers are popularly known as tightly coupled systems.  </p>
+
+
+<p>Advantages of Network Operating System:       </p>
+<div style="margin-left: 25px;">
+    <li>Highly stable centralized servers</li>
+<li>Security concerns are handled through servers</li>
+<li>New technologies and hardware up-gradation are easily integrated into the system</li>
+<li>server access is possible remotely from different locations and types of systems</li>
+</div>
+
+<br>
+<p>Disadvantages of Network Operating System:       </p>
+<div style="margin-left: 25px;">
+    <li>Servers are costly</li>
+<li> User has to depend on a central location for most operations</li>
+<li> Maintenance and updates are required regularly</li>
+
+</div>
+<br>
+<p>Examples of Network Operating System are: Microsoft Windows Server 2003, Microsoft Windows Server 2008, UNIX, Linux, Mac OS X, Novell NetWare, and BSD, etc. </p>
+
+
+<p> <p><h4 class="headerr"> Real-Time Operating System –     : </h4></p></p>
+<p>These types of OSs serve real-time systems. The time interval required to process and respond to inputs is very small. This time interval is called response time. 
+
+    Real-time systems are used when there are time requirements that are very strict like missile systems, air traffic control systems, robots, etc. </p>
+
+    <p>Two types of Real-Time Operating System which are as follows: </p>
+    <div style="margin-left: 25px;">
+    <li>Hard Real-Time Systems: </li>
+    <p>These OSs are meant for applications where time constraints are very strict and even the shortest possible delay is not acceptable. These systems are built for saving life like automatic parachutes or airbags which are required to be readily available in case of any accident. Virtual memory is rarely found in these systems.</p>
+    <li>Soft Real-Time Systems: </li>
+    <p>These OSs are for applications where for time-constraint is less strict.
+    </p>
+    
+    </div>
+<p>Advantages of Real-Time Operating System:        </p>
+<div style="margin-left: 25px;">
+    <li>Maximum Consumption: Maximum utilization of devices and system, thus more output from all the resources</li>
+<li>Task Shifting: The time assigned for shifting tasks in these systems are very less. For example, in older systems, it takes about 10 microseconds in shifting one task to another, and in the latest systems, it takes 3 microseconds.</li>
+<li>Focus on Application: Focus on running applications and less importance to applications which are in the queue.</li>
+<li>Real-time operating system in the embedded system: Since the size of programs are small, RTOS can also be used in embedded systems like in transport and others.</li>
+<li>Error Free: These types of systems are error-free.</li>
+<li> Memory Allocation: Memory allocation is best managed in these types of systems.</li>
+</div>
+
+<br>
+<p>Disadvantages of Real-Time Operating System:       </p>
+<div style="margin-left: 25px;">
+    <li>Limited Tasks: Very few tasks run at the same time and their concentration is very less on few applications to avoid errors.</li>
+<li>Use heavy system resources: Sometimes the system resources are not so good and they are expensive as well.</li>
+<li> Complex Algorithms: The algorithms are very complex and difficult for the designer to write on.</li>
+<li>Device driver and interrupt signals: It needs specific device drivers and interrupts signals to respond earliest to interrupts.</li>
+<li>Thread Priority: It is not good to set thread priority as these systems are very less prone to switching tasks.</li>
+
+</div>
+<br>
+<p>Examples of Real-Time Operating Systems are: Scientific experiments, medical imaging systems, industrial control systems, weapon systems, robots, air traffic control systems, etc.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Site footer -->
+<footer class="site-footer"  style= "margin-top: 65px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">IT GEEK HUB <i>WANTS TO BE SIMPLE </i> is an initiative, to help the upcoming students with the coding and their subjects. IT GEEK HUB focuses on providing the most efficient code or snippets OR Notes materials as the students wants it to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm and etc.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+            <li><a href="#">TOPICS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+       <a href="#">IT GEEK HUB</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+<script src="../js/os.js"></script>
+</body>
+</html>

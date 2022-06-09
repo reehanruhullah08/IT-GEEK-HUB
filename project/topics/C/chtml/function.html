@@ -110,16 +110,315 @@
     <li>sqrt() finds the square root of the number.</li>
     <li>log() finds the logarithmic value of the number.</li>
     </div>
+   
+    <p> <p><h4 class="headerr">User-defined Functions :- </h4></p></p>
+<p>User-defined functions are the ones created by the user. The user can program it to perform any desired function.It is like customizing the functions that we need in a program. A program can have more than one user-defined functions. All the user-defined functions need to be called(directly or indirectly) inside the main() function in order to be executed. </p>
+<p>Any function has 4 building blocks to be declared –</p>
+<div style="margin-left: 25px;" >
+<li><b>Function Declaration:</b> Like variable declaration, a function declaration specifies the type of the function</li>
+<li><b>Function Parameters : </b> A function needs to be defined in order to be used. It is the actual function that we are going to work on.</li>
+<li><b>Return type :</b>They contain values or arguments that are sent by the calling function.</li>
+<li><b>Function call :</b>It is how we are going to call the function to get executed.</li>
+</div>
 
-<p>The list of mostly used header files is given in the following table.</p>
+<p>The function that calls other functions in its body(usually main() function) are known as calling functions and the functions that get called are known as the called functions.</p>
+<p> This is a two-way communication process that involves sending arguments to the called function and then returning values from the called function to the calling function. Even if we do not have to return anything then we void as the return type. The figure below illustrates the control flow for functions:</p>
+<img src="../../../function-control-flow.png" alt="image not available">
+
+<p> <p><h4 class="headerr">Function Declaration  :- </h4></p></p>
+<p>Defining the type of the function is important for creating a function. A function declaration specifies</p>
+<div style="margin-left: 25px;" >
+<li>the type of the function or return type,</li>
+<li>the function name and</li>
+<li>its parameters.</li>
+</div>
+<br>
+<p>It is usually done at the top of the program and indicates how the function shall be called. The actual function definition can be present anywhere in the program. Here is how it looks:</p>
+<div style="margin-left: 25px;" >
+ <li><b>Function return type:</b>It indicates what type of value the function will return. Eg: int, double, float, char, etc. A function with void return type does not return any value.</li>
+<li><b>Function name:</b>A function name can be anything the user decides. Usually, a function name is kept according to the function it performs.</li>
+<li><b>Function Parameter:</b>It contains arguments and may or may not take values from the calling function.</li>
+
+</div>
+<p></p>
+<p>Here’s an example of a function declaration with integer return type and area as function name.</p>
+<div style="margin-left: 25px;" >
+  <code>
+    int area(int,int);
+      
+</code>
+</div>
+<p></p>
+
+<p> <p><h4 class="headerr">Function Definition :- </h4></p></p>
+<P>The function definition consists of the function body along with the return type, function name and its parameters. Here is how it looks like:</P>
+<div style="margin-left: 25px;" >
+  <code>
+    return_type function_name(parameter) {
+    <br>  //body of the function
+     <br> }
+      
+</code>
+</div>
+<p></p>
+<p>The body of the function contains a list of statements that gets executed once the function is being called. This is known as the called function and after execution of the called function the control goes back to the calling function.</p>
+
+<p> <p><h4 class="headerr">Function Parameter :- </h4></p></p>
+<p>The function parameter contains the arguments that are passed by the calling function. They are placed within a pair of parenthesis and can have any number of arguments separated by commas. Every parameter has a specific datatype and it accepts only those values which can be assigned to that datatype. A function may or may not have a parameter. A function with no parameter is defined as follows:</p>
+<div style="margin-left: 25px;" >
+  <code>
+    void sum() { 
+      <br>    //body of the function
+      <br>    } 
+      
+</code>
+</div>
+<p></p>
+<p>In C Programming language, there are two types of function parameters:</p>
+<div style="margin-left: 25px;" >
+  <li><b>Formal Parameter: </b>The parameter which is written at the function definition is known as a formal parameter</li>
+ <li><b>Actual Parameter:</b>The parameter that is written at the function call is known as the actual parameter</li>
+ 
+ 
+ </div>
+ <p></p>
+<p>The formal and actual parameters are shown below:
+
+</p>
+<div style="margin-left: 25px;" >
+  <code>
+  <br>  int sum(int,int);
+  <br> void main()
+  <br>  {
+    <br>  int a ,b ;
+    <br>  //body of main
+    <br>  sum(a ,b );//actual parameter
+    <br> } 
+    <br> int sum(int x, int y)//formal parameter
+    <br> {
+      <br>   //body of the function
+      <br> }
+      
+</code>
+</div>
+<p></p>
+
+<p> <p><h3 class="headerr">Different aspects of function calling :- </h3></p></p>
+<p>A function may or may not accept any argument. It may or may not return any value. Based on these facts, There are four different aspects of function calls.</p>
+<div style="margin-left: 25px;" >
+
+<li>function without arguments and without return value</li>
+<li>function without arguments and with return value</li>
+<li>function with arguments and without return value</li>
+<li>function with arguments and with return value</li>
+
+
+
+</div>
+<p> <p><h4 class="headerr">Example for Function without argument and return value</h4></p></p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+    <br>    void printName();  
+    <br>    void main ()  
+    <br>   {  
+      <br>       printf("Hello ");  
+      <br>       printName();  
+      <br>  }  
+    <br>   <br>   void printName()  
+    <br>  {  
+      <br>     printf("IT GEEK HUB");  
+      <br> }  
+              <br>  
+              <br> 
+              output :
+              <br>   Hello IT GEEK HUB
+</code>
+</div>
+<p></p>
+
+<p> <p><h4 class="headerr">Example for Function without argument and with return value</h4></p></p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+    <br>   int sum();  
+    <br> void main()  
+    <br> {  
+      <br>    int result;   
+      <br>   printf("\nGoing to calculate the sum of two numbers:");  
+      <br>  result = sum();  
+      <br>  printf("%d",result);  
+      <br> }  
+      <br> int sum()  
+      <br> {  
+        <br> int a,b;   
+        <br>  printf("\nEnter two numbers");  
+        <br> scanf("%d %d",&a,&b);  
+    <br>  return a+b;   
+}  
+              <br>  
+              <br> 
+              output :
+              <br> Going to calculate the sum of two numbers:
+
+              <br> Enter two numbers 10 
+              <br> 24 
+
+              <br> The sum is 34
+</code>
+</div>
+<p></p>
+
+
+<p> <p><h4 class="headerr">Example for Function with argument and without return value</h4></p></p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+    <br>  void sum(int, int);  
+    <br>void main()  
+    <br>{  
+      <br>   int a,b,result;   
+      <br>  printf("\nGoing to calculate the sum of two numbers:");  
+      <br>  printf("\nEnter two numbers:");  
+      <br>  scanf("%d %d",&a,&b);  
+      <br> sum(a,b);  
+      <br>}  
+      <br>void sum(int a, int b)  
+      <br>{  
+  <br>   printf("\nThe sum is %d",a+b);      
+  <br>}  
+              <br>  
+              <br> 
+              output :
+              <br> Going to calculate the sum of two numbers:
+
+              <br>  Enter two numbers 10 
+              <br> 24 
+              
+              <br>The sum is 34
+</code>
+</div>
+<p></p>
+
+<p> <p><h4 class="headerr">Example for Function with argument and with return value</h4></p></p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+    <br>  int sum(int, int);  
+void main()  
+{  
+    int a,b,result;   
+    printf("\nGoing to calculate the sum of two numbers:");  
+    printf("\nEnter two numbers:");  
+    scanf("%d %d",&a,&b);  
+    result = sum(a,b);  
+    printf("\nThe sum is : %d",result);  
+}  
+int sum(int a, int b)  
+{  
+    return a+b;  
+}  
+              <br>  
+              <br> 
+              output :
+              <br> Going to calculate the sum of two numbers:
+              <br>  Enter two numbers:10
+              <br>  20 
+              <br>  The sum is : 30   
+              
+</code>
+</div>
+<p></p>
+
+
+
+<p> <p><h4 class="headerr">Function Call :- </h4></p></p>
+<P>A function needs to be called by the calling function in order to get executed. There are two ways in which a function can be called,  i.e., call by value and call by reference.</P>
+
+
+<p> <p><h4 class="headerr">Call by value in C :- </h4></p></p>
+<div style="margin-left: 25px;" >
+  <li>In call by value method, the value of the actual parameters is copied into the formal parameters. In other words, we can say that the value of the variable is used in the function call in the call by value method.</li>
+  <li>In call by value method, we can not modify the value of the actual parameter by the formal parameter.</li>
+<li>In call by value, different memory is allocated for actual and formal parameters since the value of the actual parameter is copied into the formal parameter.
+  </li>
+<li>The actual parameter is the argument which is used in the function call whereas formal parameter is the argument which is used in the function definition.</li> 
+</div>
+<p>Let's try to understand the concept of call by value in c language by the example given below:</p>
+
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+    <br>  void change(int num) {    
+      <br>  printf("Before adding value inside function num=%d \n",num);    
+      <br>  num=num+100;    
+      <br>   printf("After adding value inside function num=%d \n", num);    
+      <br>  }    
+      <br>  int main() {    
+        <br>    int x=100;    
+        <br>   printf("Before function call x=%d \n", x);    
+        <br>      printf("After function call x=%d \n", x);    
+        <br> return 0;  
+        <br> }    
+              <br>  
+              <br> 
+              output :
+              <br>  Before function call x=100
+              <br>  Before adding value inside function num=100
+              <br>  After adding value inside function num=200
+              <br>  After function call x=100
+              
+</code>
+</div>
+<p></p>
+
+<p> <p><h4 class="headerr">Call by reference in C:- </h4></p></p>
+<div style="margin-left: 25px;" >
+  <li>In call by reference, the address of the variable is passed into the function call as the actual parameter.
+  </li>
+  <li>The value of the actual parameters can be modified by changing the formal parameters since the address of the actual parameters is passed</li>
+<li>In call by reference, the memory allocation is similar for both formal parameters and actual parameters. All the operations in the function are performed on the value stored at the address of the actual parameters, and the modified value gets stored at the same address.
+  </li>
+
+</div>
+<p>Consider the following example for the call by reference.</p>
+<div style="margin-left: 25px;" >
+  <code>
+    #include &#60;stdio.h&#62;
+    <br>   void change(int *num) {    
+      <br>   printf("Before adding value inside function num=%d \n",*num);    
+      <br>    (*num) += 100;    
+      <br>    printf("After adding value inside function num=%d \n", *num);    
+      <br>  }      
+      <br>  int main() {    
+        <br>     int x=100;    
+        <br>     printf("Before function call x=%d \n", x);    
+        <br>    change(&x);//passing reference in function    
+        <br>   printf("After function call x=%d \n", x);    
+        <br>  return 0;  
+  <br>   }        
+              <br>  
+              <br> 
+              output :
+              <br> Before function call x=100
+              <br>  Before adding value inside function num=100
+              <br>   After adding value inside function num=200
+              <br> After function call x=200
+              
+</code>
+</div>
+<p></p>
+
+<p> <p><h3 class="headerr">Difference between call by value and call by reference in c </h3></p></p>
+
 <table class="alt">
-  <tr><th>Header file</th><th>Description</th></tr>
-  <tr><td style="color: black;"><b>stdio.h</b></td><td> This is a standard input/output header file. It contains all the library functions regarding standard input/output.</td></tr>
-  <tr><td>conio.h</td><td>This is a console input/output header file.</td></tr>
+  <tr><th>Call by value</th><th>Call by reference</th></tr>
+  <tr><td style="color: black;"><b>A copy of the value is passed into the function</b></td><td>An address of value is passed into the function</td></tr>
+  <tr><td>Changes made inside the function is limited to the function only. The values of the actual parameters do not change by changing the formal parameters.</td><td>Changes made inside the function validate outside of the function also. The values of the actual parameters do change by changing the formal parameters.</td></tr>
+  <tr><td style="color: black;"><b>Actual and formal arguments are created at the different memory location</b></td><td>Actual and formal arguments are created at the same memory location</td></tr>
+  
   
   </table>
-
-
 
 
 

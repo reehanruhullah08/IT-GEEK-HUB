@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>control statements</title>
+    <!--css-->
+    <link rel="stylesheet" href="../ccss/c.css">
+   
+    <!--box icon-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<!--bootstrap-->
+<link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    
+<body class="bgco">
+    
+    <div class="container-fluid">
+        <div class="row">
+<nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebaropen'></i>
+        <span class="logo">
+            <a href="#">IT GeeK HuB</a>
+        </span>
+            <div class="menu">
+              <div class="logo-toggle">
+                <span class="logo">
+                    <a href="#">IT GeeK HuB</a>
+                    </span>
+                    <i class='bx bx-right-arrow-alt sidebarclose'></i>
+              </div>
+
+               <ul class="nav-links">
+                    <li><a href="../../../home.html">Home</a></li>
+                    <li><a href="../../../courses/cousesindex.html">Topics</a></li>
+                    <li><a href="../../../home.html#games">Games</a></li>
+                    <li><a href="../../../possible_question/poss_quest.html">Important Question</a></li>
+                    <li><a href="../../../contact-form-18/index.html">Contact us</a></li>
+                    <li><a href="../../../signin/Login_v5/index.html">Sign up</a></li>
+                  
+                </ul>
+            </div>
+            <div class="darklight-searchbox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun' ></i>
+                </div>
+            </div>
+     </div>
+</nav>
+</div>
+<div class="row "  style= "margin-top: 65px;margin-left: 20px;">
+    <h1 class="headerr">C -  Passing Array Elements to a Function </h1>
+</div>
+<p>Arrays are passed to the functions as arguments. Like variables, a whole array can be passed to a function. We already know that functions make it so easy for us to manage complex programs and array makes it easy to handle a large number of data. So with this functionality, we can achieve greater simplicity in writing codes and execute them. An array can be passed to the function as an argument of the formal parameter in these ways:</p>
+<p>First way:</p>
+<div style="margin-left: 25px;" >
+    <code>
+        return_type function(type arrayname[])  
+                
+    </code>
+  </div>
+  <p></p>
+  <p>Second way::</p>
+  <div style="margin-left: 25px;" >
+      <code>
+        return_type function(type arrayname[SIZE])  
+                  
+      </code>
+    </div>
+    <p></p>
+
+    <p>Third way:</p>
+    <div style="margin-left: 25px;" >
+        <code>
+            return_type function(type *arrayname)  
+ 
+                    
+        </code>
+      </div>
+      <p></p>
+<p>Arrays can be passed to the functions in many manners. Let’s have a look at all those different ways and their classification based on their dimensions.</p>
+
+
+<p> <p><h3 class="headerr">Single Dimensional Arrays </h3></p></p>
+<p>There are two ways of passing an array to a function – by value and by reference, wherein we pass values of the array and the addresses of the array elements respectively.
+</p>
+<div>
+    <li><b>By value</b> is a very direct process in which we pass the array elements directly to the function.</li>
+<li><b>By reference</b> makes use of pointers which indicates the address of the first array element and through that the array elements are accessed. Let’s have a look at both these processes:</li>
+</div>
+
+<p> <p><h4 class="headerr">By value</h4></p></p>
+<p>Here is a simple program that shows us the pass by value process. This program displays the elements of an array:</p>
+
+<div style="margin-left: 25px;" >
+    <code>
+      #include &#60;stdio.h&#62;
+      <br> void access(int[]); // declaring an array function. Parentheses indicates that
+      <br>               // an array shall be passed in the function
+      <br> int main() {
+        <br> int a[5], i;
+        <br> printf("Enter 5 elements in the array:\n");
+  <br> for (i = 0; i < 5; i++) {
+    <br>    scanf("%d", &a[i]);
+    <br>  }
+    <br> access(a); // here we are passing the whole array a and not individual
+  <br>            // elements
+  <br>  return 0;
+  <br> }
+  <br> void access(int a[5]) // the formal parameter has a sized array
+  <br> {
+    <br>  int i;
+    <br> printf("The array elements are as follows:\n");
+  <br> for (i = 0; i < 5; i++)
+  <br> printf("%d\n", a[i]); // displaying all the elements in the array
+  <br> }         
+                <br>  
+                <br> 
+                output :
+                <br> Enter 5 elements in the array:
+                <br>   9
+                <br>   4
+                <br>  7
+                <br> 0
+                <br> 1
+                <br> The array elements are as follows:
+                <br> 9
+                <br> 4
+                <br> 7
+                <br> 0
+                <br>1
+                
+    </code>
+  </div>
+  <p></p>
+
+  <p> <p><h4 class="headerr">By reference</h4></p></p>
+<p>The following program shows us the pass by reference process of passing arrays into functions.This program displays the elements of an array:</p>
+
+<div style="margin-left: 25px;" >
+    <code>
+      #include &#60;stdio.h&#62;
+      <br>  void access(int *);
+      <br>  /*declaring an array function. parentheses indicates that we shall be passing
+      <br>  * the whole array. is the pointing operator that receives the value of the
+      <br>  * address passed to the function.*/
+      <br> int main() {
+        <br>  int i, x[5];
+        <br>  printf("Enter 5 numbers in an array: \n");
+        <br> for (i = 0; i < 5; i++)
+        <br>   scanf("%d", &x[i]);
+        <br>  access(x); // here we pass the address of the array to the function access
+        <br>  return 0;
+        <br> }
+        <br>  void access(
+        <br>       int *a) // we receive the value in another array variable with the name 'a'
+        <br>  {
+            <br>  int i;
+        <br> printf("The array elements are as follows:\n");
+        <br>  for (i = 0; i < 5; i++)
+        <br>     printf("%d \n", a[i]); // displays the array elements
+          <br>   }         
+                <br>  
+                <br> 
+                output :
+                <br> Enter 5 elements in the array:
+                <br>  9
+                <br>    4
+                <br>     7
+                <br>     0
+                <br>     1
+                <br>    The array elements are as follows:
+                <br>    9
+                <br>    4
+                <br>   7
+                <br>    0
+                <br>    1
+                
+    </code>
+  </div>
+  <p></p>
+
+  <p> <p><h3 class="headerr">Multi-Dimensional Arrays </h3></p></p>
+<p>Multi-dimensional arrays are passed to a function in the same way as a single dimensional array. The only difference is that the number of parentheses while declaring a function will increase according to the dimension of the array.Like 1D arrays, the 2D array can also be passed by two methods: by value and by reference. Let’s have a look at these processes</p>
+
+<p> <p><h4 class="headerr">By value</h4></p></p>
+<p>Here is a program which shows how a multi-dimensional array(2D array here) is passed to a function. This program displays the elements of an array:</p>
+<div style="margin-left: 25px;" >
+    <code>
+      #include &#60;stdio.h&#62;
+      <br>  void display(int a[][2]); // declaring a function which takes a two dimensional
+      <br>  // integer array as an argument
+      <br> int main() {
+        <br> int num[2][2], i, j;
+        <br> printf("Enter 2x2 numbers:\n");
+        <br> for (i = 0; i < 2; i++) {
+            <br> for (j = 0; j < 2; j++) {
+                <br> scanf("%d", &num[i][j]);
+                <br> }
+                <br> }
+<br> display(num); // the whole 2D array gets passed to the function display()
+<br> return 0;
+<br> }
+<br> void display(int a[][2]) // the formal parameter takes an array as argument.
+<br>     // Only first dimension is skippable
+<br> {
+    <br> int i, j;
+    <br> printf("The matrix is:\n"); // the matrix is displayed using two for loops
+    <br> for (i = 0; i < 2; i++) {
+        <br> for (j = 0; j < 2; j++)
+        <br> printf("%d ", a[i][j]);
+<br> printf("\n");
+<br> }
+<br> }         
+                <br>  
+                <br> 
+                output :
+                <br> Enter 2x2 numbers:
+                <br>  5
+                <br>  0
+                <br>  1
+                <br>  8
+                <br> The matrix is:
+                <br>  5 0
+                <br>  1 8
+    </code>
+  </div>
+  <p></p>
+
+
+  <p> <p><h4 class="headerr">By reference</h4></p></p>
+<p>The program below shows how we pass the array by reference with the help of pointers. It displays all the elements of a 2D array:</p>
+
+<div style="margin-left: 25px;" >
+    <code>
+      #include &#60;stdio.h&#62;
+      <br>  #include <stdlib.h>
+        <br>  void print(int **arr, int row, int col) {
+            <br>  int i, j;
+          <br> printf("\nThe matrix is:\n");
+          <br>  for (i = 0; i < row; i++) {
+            <br>   for (j = 0; j < col; j++)
+            <br>    printf("%d ", arr[i][j]);
+              <br>  printf("\n");
+            <br>  }
+          <br>  }
+        <br>  <br> int main() {
+            <br>  int row, col, i, j;
+          <br>  printf("Enter number of rows - ");
+          <br>  <br>  scanf("%d", &row);
+          <br> printf("\nEnter number of columns - ");
+          <br> scanf("%d", &col);
+          <br>  int **arr = (int **)malloc(sizeof(int *) * row);
+          <br> for (i = 0; i < row; i++) {
+               <br>   arr[i] = (int *)malloc(sizeof(int) * col);
+               <br> }
+          <br>printf("\nEnter %d * %d array\n", row, col);
+          <br>// now Scan or initialise
+          <br>  for (i = 0; i < row; i++) {
+            <br> for (j = 0; j < col; j++) {
+                <br>   scanf("%d", &arr[i][j]);
+              <br>   }
+            <br>  }
+          <br>// pass the array to function print as
+          <br>  print(arr, row, col);
+          <br>  return 0;
+          <br> }       
+                <br>  
+                <br> 
+                output :
+                <br>Enter number of rows - 2
+                <br> Enter number of columns - 3
+                <br>  Enter 2 * 4 array
+                <br>  5
+                <br>  1
+                <br> 2
+                <br> 1
+                <br> 9
+                <br>0
+                <br>The matrix is:
+                <br> 5 1 2 
+                <br>1 9 0 
+    </code>
+  </div>
+  <p></p>
+
+
+  <p> <p><h3 class="headerr">Returning array from the function </h3></p></p>
+<p>As we know that, a function can not return more than one value. However, if we try to write the return statement as return a, b, c; to return three values (a,b,c), the function will return the last mentioned value which is c in our case. In some problems, we may need to return multiple values from a function. In such cases, an array is returned from the function.</p>
+<p>Returning an array is similar to passing the array into the function. The name of the array is returned from the function. To make a function returning an array, the following syntax is used.</p>
+
+<div style="margin-left: 25px;" >
+    <code>
+        int * Function_name() {  
+         <br>   //some statements;   
+         <br>     return array_type;  
+         <br>      }  
+            
+                
+    </code>
+  </div>
+  <p></p>
+
+<p>To store the array returned from the function, we can define a pointer which points to that array. We can traverse the array by increasing that pointer since pointer initially points to the base address of the array. Consider the following example that contains a function returning the sorted array.</p>
+
+<div style="margin-left: 25px;" >
+    <code>
+      #include &#60;stdio.h&#62;
+      <br> int* Bubble_Sort(int[]);  
+      <br> void main ()    
+      <br> {    
+        <br>    int arr[10] = { 10, 9, 7, 101, 23, 44, 12, 78, 34, 23};     
+        <br> int *p = Bubble_Sort(arr), i;  
+        <br>  printf("printing sorted elements ...\n");  
+        <br>  for(i=0;i&#60;10;i++)  
+        <br> {  
+            <br>  printf("%d\n",*(p+i));  
+        <br>  }  
+        <br> }    
+        <br> int* Bubble_Sort(int a[]) //array a[] points to arr.   
+        <br> {  
+            <br> int i, j,temp;     
+            <br>   for(i = 0; i<10; i++)    
+            <br> {    
+        <br>     for(j = i+1; j<10; j++)    
+        <br> {    
+            <br>    if(a[j] &#60; a[i])    
+            <br>   {    
+                <br>     temp = a[i];    
+                <br>      a[i] = a[j];    
+                <br>   a[j] = temp;     
+                <br>  }     
+            <br> }     
+        <br>  }     
+    <br> return a;  
+    <br> }        
+                <br>  
+                <br> 
+                output :
+                Printing Sorted Element List ...
+                <br> 7  
+                <br> 9   
+                <br> 10  
+                <br> 12  
+                <br> 23 
+                <br> 23  
+                <br> 34  
+                <br> 44  
+                <br> 78  
+                <br> 101  
+    </code>
+  </div>
+  <p></p>
+
+
+
+
+
+
+
+
+<!-- Site footer -->
+<footer class="site-footer"  style= "margin-top: 65px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">IT GEEK HUB <i>WANTS TO BE SIMPLE </i> is an initiative, to help the upcoming students with the coding and their subjects. IT GEEK HUB focuses on providing the most efficient code or snippets OR Notes materials as the students wants it to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm and etc.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+            <li><a href="#">TOPICS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+       <a href="#">IT GEEK HUB</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+<script src="../cjs/c.js"></script>
+</body>
+</html>

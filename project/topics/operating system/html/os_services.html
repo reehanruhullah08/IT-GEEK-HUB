@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating System</title>
+    <!--css-->
+    <link rel="stylesheet" href="../css/os.css">
+   
+    <!--box icon-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<!--bootstrap-->
+<link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    
+<body class="bgco">
+    
+    <div class="container-fluid">
+        <div class="row">
+<nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebaropen'></i>
+        <span class="logo">
+            <a href="#">IT GeeK HuB</a>
+        </span>
+            <div class="menu">
+              <div class="logo-toggle">
+                <span class="logo">
+                    <a href="#">IT GeeK HuB</a>
+                    </span>
+                    <i class='bx bx-right-arrow-alt sidebarclose'></i>
+              </div>
+
+               <ul class="nav-links">
+                    <li><a href="../../../home.html">Home</a></li>
+                    <li><a href="../../../courses/cousesindex.html">Topics</a></li>
+                    <li><a href="../../../home.html#games">Games</a></li>
+                    <li><a href="../../../possible_question/poss_quest.html">Important Question</a></li>
+                    <li><a href="../../../contact-form-18/index.html">Contact us</a></li>
+                    <li><a href="../../../signin/Login_v5/index.html">Sign up</a></li>
+                  
+                </ul>
+            </div>
+            <div class="darklight-searchbox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun' ></i>
+                </div>
+            </div>
+     </div>
+</nav>
+</div>
+<div class="row "  style= "margin-top: 65px;margin-left: 20px;">
+    <h1 class="headerr"> Operating System services</h1>
+</div>
+<br>
+<p>An Operating System provides services to both the users and to the programs.</p>
+
+<div style="margin-left: 25px;">
+    <li>It provides programs an environment to execute.</li>
+<li>It provides users the services to execute the programs in a convenient manner.
+</li>
+</div>
+<br>
+<p>Following are a few common services provided by an operating system −</p>
+<div style="margin-left: 25px;">
+    <li>Program execution</li>
+   <li>I/O operations</li>
+<li>File System manipulation</li>
+<li>Communication</li>
+<li>Resource Allocation  </li>
+<li>Error Detection</li>
+<li> Protection</li>
+</div>
+<br>
+<p> <p><h4 class="headerr"> Program execution  : </h4></p></p>
+<p>Operating systems handle many kinds of activities from user programs to system programs like printer spooler, name servers, file server, etc. Each of these activities is encapsulated as a process.</p>
+<p>A process includes the complete execution context (code to execute, data to manipulate, registers, OS resources in use). Following are the major activities of an operating system with respect to program management −</p>
+<div style="margin-left: 25px;">
+    <li>Loads a program into memory.</li>
+   <li>Executes the program.</li>
+<li>Handles program's execution.</li>
+<li>Provides a mechanism for process synchronization.</li>
+<li>Provides a mechanism for process communication.  </li>
+<li>Error Detection</li>
+<li> Provides a mechanism for deadlock handling.</li>
+</div>
+<br>
+
+<p> <p><h4 class="headerr"> I/O Operation  : </h4></p></p>
+<p>An I/O subsystem comprises of I/O devices and their corresponding driver software. Drivers hide the peculiarities of specific hardware devices from the users.</p>
+<p>An Operating System manages the communication between user and device drivers.</p>
+<div style="margin-left: 25px;">
+<li>I/O operation means read or write operation with any file or any specific I/O device.</li>
+<li>Operating system provides the access to the required I/O device when required.</li>
+</div>
+
+<p> <p><h4 class="headerr">File system manipulation  : </h4></p></p>
+<p>A file represents a collection of related information. Computers can store files on the disk (secondary storage), for long-term storage purpose. Examples of storage media include magnetic tape, magnetic disk and optical disk drives like CD, DVD. Each of these media has its own properties like speed, capacity, data transfer rate and data access methods.</p>
+<p>A file system is normally organized into directories for easy navigation and usage. These directories may contain files and other directions. Following are the major activities of an operating system with respect to file management −</p>
+<div style="margin-left: 25px;">
+    <li>Program needs to read a file or write a file.</li>
+    <li>The operating system gives the permission to the program for operation on file.</li>
+<li>Permission varies from read-only, read-write, denied and so on.</li>   
+<li>Operating System provides an interface to the user to create/delete files.</li>
+<li>Operating System provides an interface to the user to create/delete directories.</li>
+<li>Operating System provides an interface to create the backup of file system.</li>
+</div>
+
+<p> <p><h4 class="headerr">Communication  : </h4></p></p>
+<p>In case of distributed systems which are a collection of processors that do not share memory, peripheral devices, or a clock, the operating system manages communications between all the processes. Multiple processes communicate with one another through communication lines in the network.</p>
+<p>The OS handles routing and connection strategies, and the problems of contention and security. Following are the major activities of an operating system with respect to communication −</p>
+<div style="margin-left: 25px;">
+    <li>Two processes often require data to be transferred between them</li>
+    <li>Both the processes can be on one computer or on different computers, but are connected through a computer network.</li>
+<li>Communication may be implemented by two methods, either by Shared Memory or by Message Passing.</li>   
+</div>
+
+<p> <p><h4 class="headerr">Error handling : </h4></p></p>
+<p>Errors can occur anytime and anywhere. An error may occur in CPU, in I/O devices or in the memory hardware. Following are the major activities of an operating system with respect to error handling −</p>
+<div style="margin-left: 25px;">
+    <li>The OS constantly checks for possible errors.</li>
+    <li>The OS takes an appropriate action to ensure correct and consistent computing.</li>
+</div>
+
+<p> <p><h4 class="headerr">Resource Management  : </h4></p></p>
+    <p>In case of multi-user or multi-tasking environment, resources such as main memory, CPU cycles and files storage are to be allocated to each user or job. Following are the major activities of an operating system with respect to resource management −</p>
+    <div style="margin-left: 25px;">
+    <li>The OS manages all kinds of resources using schedulers.</li>
+    <li>CPU scheduling algorithms are used for better utilization of CPU.</li>
+</div>
+
+<p> <p><h4 class="headerr">Protection  : </h4></p></p>
+<p>Considering a computer system having multiple users and concurrent execution of multiple processes, the various processes must be protected from each other's activities.</p>
+<p>Protection refers to a mechanism or a way to control the access of programs, processes, or users to the resources defined by a computer system. Following are the major activities of an operating system with respect to protection −</p>
+<div style="margin-left: 25px;">
+    <li>The OS ensures that all access to system resources is controlled.</li>
+    <li>The OS ensures that external I/O devices are protected from invalid access attempts.</li>
+    <li>The OS provides authentication features for each user by means of passwords.</li>
+</div>
+
+<p> <p><h1 class="headerr">System Call </h1></p></p>
+<p>In computing, a system call is the programmatic way in which a computer program requests a service from the kernel of the operating system it is executed on. A system call is a way for programs to interact with the operating system. A computer program makes a system call when it makes a request to the operating system’s kernel. System call provides the services of the operating system to the user programs via Application Program Interface(API). It provides an interface between a process and operating system to allow user-level processes to request services of the operating system. System calls are the only entry points into the kernel system. All programs needing resources must use system calls.</p>
+<p><b>Types of System Calls : </b></p>
+<p>There are 5 different categories of system calls –</p>
+<div style="margin-left: 25px;">
+    <li>Process control</li>
+   <li>File management</li>
+<li>Device management</li>
+<li>Communication</li>
+<li>Information maintenance  </li>
+
+</div>
+<br>
+
+
+<p> <p><h4 class="headerr">Process Control </h4></p></p>
+<p>This system calls perform the task of process creation, process termination, etc.</p>
+<p>Function :</p>
+<div style="margin-left: 25px;">
+    <li>End and Abort</li>
+   <li>Load and Execute</li>
+<li>Create Process and Terminate Process</li>
+<li>Wait and Signal Event</li>
+<li>Allocate and free memory  </li>
+
+</div>
+<br>
+
+
+<p> <p><h4 class="headerr">File Management </h4></p></p>
+<p>File management system calls handle file manipulation jobs like creating a file, reading, and writing, etc.</p>
+<p>Function :</p>
+<div style="margin-left: 25px;">
+    <li>Create a file</li>
+   <li>Delete file</li>
+<li>Open and close file</li>
+<li>Read, write, and reposition</li>
+<li>Get and set file attributes  </li>
+
+</div>
+<br>
+
+
+<p> <p><h4 class="headerr"> Device Management</h4></p></p>
+<p>Device management does the job of device manipulation like reading from device buffers, writing into device buffers, etc.</p>
+<p>Function :</p>
+<div style="margin-left: 25px;">
+    <li>Request and release device</li>
+   <li>Logically attach/ detach devices</li>
+<li>Get and Set device attributes</li>
+</div>
+<br>
+
+
+<p> <p><h4 class="headerr"> Information Maintenance</h4></p></p>
+<p>It handles information and its transfer between the OS and the user program.</p>
+<p>Function :</p>
+<div style="margin-left: 25px;">
+    <li>Get or set time and date</li>
+   <li>Get process and device attributes</li>
+</div>
+<br>
+
+
+<p> <p><h4 class="headerr"> Communication:</h4></p></p>
+<p>These types of system calls are specially used for interprocess communications.</p>
+<p>Function :</p>
+<div style="margin-left: 25px;">
+    <li>Create, delete communications connections</li>
+   <li>Send, receive message</li>
+   <li>Help OS to transfer status information</li>
+   <li>Attach or detach remote devices</li>
+</div>
+<br>
+
+<p> <p><h3 class="headerr">Rules for passing Parameters for System Call:</h3></p></p>
+<p>Here are general common rules for passing parameters to the System Call:</p>
+<div style="margin-left: 25px;">
+    <li>Parameters should be pushed on or popped off the stack by the operating system.</li>
+   <li>Parameters can be passed in registers.</li>
+   <li>When there are more parameters than registers, it should be stored in a block, and the block address should be passed as a parameter to a register.</li>
+   
+</div>
+<br>
+
+<p> <p><h3 class="headerr">Important System Calls Used in OS</h3></p></p>
+<p><b>open()</b></p>
+<p>The open() system call is used to provide access to a file in a file system. This system call allocates resources to the file and provides a handle that the process uses to refer to the file. A file can be opened by multiple processes at the same time or be restricted to one process. It all depends on the file organisation and file system.</p>
+<p><b>read()</b></p>
+<p>The read() system call is used to access data from a file that is stored in the file system. The file to read can be identified by its file descriptor and it should be opened using open() before it can be read. In general, the read() system calls takes three arguments i.e. the file descriptor, buffer which stores read data and number of bytes to be read from the file.</p>
+<p><b>write()</b></p>
+<p>The write() system calls writes the data from a user buffer into a device such as a file. This system call is one of the ways to output data from a program. In general, the write system calls takes three arguments i.e. file descriptor, pointer to the buffer where data is stored and number of bytes to write from the buffer.</p>
+<p><b>close()</b></p>
+<p>The close() system call is used to terminate access to a file system. Using this system call means that the file is no longer required by the program and so the buffers are flushed, the file metadata is updated and the file resources are de-allocated</p>
+
+<p> <p><h1 class="headerr">System Programs </h1></p></p>
+<p>System Programming can be defined as the act of building Systems Software using System Programming Languages. According to Computer Hierarchy, one which comes at last is Hardware. Then it is Operating System, System Programs, and finally Application Programs. Program Development and Execution can be done conveniently in System Programs. Some of the System Programs are simply user interfaces, others are complex. It traditionally lies between the user interface and system calls. </p>
+<p>The system programs are responsible for the development and execution of a program and they can be used by the help of system calls because system calls define different types of system programs for different tasks.</p>
+<p>System Programs can be divided into these categories : </p>
+
+
+
+
+
+<!-- Site footer -->
+<footer class="site-footer"  style= "margin-top: 65px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">IT GEEK HUB <i>WANTS TO BE SIMPLE </i> is an initiative, to help the upcoming students with the coding and their subjects. IT GEEK HUB focuses on providing the most efficient code or snippets OR Notes materials as the students wants it to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm and etc.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+            <li><a href="#">TOPICS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+       <a href="#">IT GEEK HUB</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+<script src="../js/os.js"></script>
+</body>
+</html>
