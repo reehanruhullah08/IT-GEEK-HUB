@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>control statements</title>
+    <!--css-->
+    <link rel="stylesheet" href="../ccss/c.css">
+   
+    <!--box icon-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<!--bootstrap-->
+<link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    
+<body class="bgco">
+    
+    <div class="container-fluid">
+        <div class="row">
+<nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebaropen'></i>
+        <span class="logo">
+            <a href="#">IT GeeK HuB</a>
+        </span>
+            <div class="menu">
+              <div class="logo-toggle">
+                <span class="logo">
+                    <a href="#">IT GeeK HuB</a>
+                    </span>
+                    <i class='bx bx-right-arrow-alt sidebarclose'></i>
+              </div>
+
+               <ul class="nav-links">
+                    <li><a href="../../../home.html">Home</a></li>
+                    <li><a href="../../../courses/cousesindex.html">Topics</a></li>
+                    <li><a href="../../../home.html#games">Games</a></li>
+                    <li><a href="../../../possible_question/poss_quest.html">Important Question</a></li>
+                    <li><a href="../../../contact-form-18/index.html">Contact us</a></li>
+                    <li><a href="../../../signin/Login_v5/index.html">Sign up</a></li>
+                  
+                </ul>
+            </div>
+            <div class="darklight-searchbox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun' ></i>
+                </div>
+            </div>
+     </div>
+</nav>
+</div>
+<div class="row "  style= "margin-top: 65px;margin-left: 20px;">
+    <h1 class="headerr">C - Arrays </h1>
+</div>
+<p>An array is defined as the collection of similar type of data items stored at contiguous memory locations. Arrays are the derived data type in C programming language which can store the primitive type of data such as int, char, double, float, etc. It also has the capability to store the collection of derived data types, such as pointers, structure, etc. The array is the simplest data structure where each data element can be randomly accessed by using its index number.</p>
+<p>Arrays a kind of data structure that can store a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.</p>
+<p>Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare one array variable such as numbers and use numbers[0], numbers[1], and ..., numbers[99] to represent individual variables. A specific element in an array is accessed by an index.</p>
+All arrays consist of contiguous memory locations. The lowest address corresponds to the first element and the highest address to the last element.
+<img src="../../../arrays.jpg" alt="image not available">
+
+<p> <p><h3 class="headerr">Properties of Array :- </h3></p></p>
+<div style= "margin-left: 20px;"> 
+    <li>Each element of an array is of same data type and carries the same size, i.e., int = 4 bytes.
+    </li>
+    <li>Elements of the array are stored at contiguous memory locations where the first element is stored at the smallest memory location.</li>
+    <li>Elements of the array can be randomly accessed since we can calculate the address of each element of the array with the given base address and the size of the data element.	</li>
+    
+   </div>
+   <p> <p><h3 class="headerr">Declaring Arrays :- </h3></p></p>
+   <p>To declare an array in C, a programmer specifies the type of the elements and the number of elements required by an array as follows −</p>
+   <div style="margin-left: 25px;" >
+    <code>
+        data_type array_name[array_size];  
+        
+  </code>
+  </div>
+  <p></p>
+<p>Now, let us see the example to declare the array.</p>
+<div style="margin-left: 25px;" >
+    <code>
+        int marks[10];  
+        
+  </code>
+  </div>
+  <p></p>
+  <p> <p><h3 class="headerr">Initialization of C Array :- </h3></p></p>
+<p>The simplest way to initialize an array is by using the index of each element. We can initialize each element of the array by using the index. Consider the following example.</p>
+
+<div style="margin-left: 25px;" >
+    <code>
+        marks[0]=80;//initialization of array  
+<br> marks[1]=60;  
+<br>marks[2]=70;  
+<br>marks[3]=85;  
+<br>marks[4]=75;  
+  </code>
+  </div>
+  <p></p>
+<img src="../../../arrayinitialization.png" alt="">
+<p> <p><h3 class="headerr">C array example :- </h3></p></p>
+<div style="margin-left: 25px;" >
+    <code>
+      #include &#60;stdio.h&#62;
+        <br> int main()
+        <br> {
+            <br>    int i=0;    
+            <br>   int marks[5];//declaration of array       
+            <br>   marks[0]=80;//initialization of array    
+            <br>    marks[1]=60;    
+            <br>    marks[2]=70;    
+            <br>    marks[3]=85;    
+            <br>   marks[4]=75;    
+            <br>    //traversal of array    
+            <br>   for(i=0;i<5;i++){      
+                <br>   printf("%d \n",marks[i]);    
+                <br>   }//end of for loop     
+                <br>  return 0;  
+                <br>  }  
+                <br>  
+                output :
+                <br>   80
+                <br>60
+                <br>70
+                <br>85
+                <br>75
+  </code>
+  </div>
+  <p></p>
+
+  <p> <p><h3 class="headerr">C Array: Declaration with Initialization :- </h3></p></p>
+  <p>We can initialize the c array at the time of declaration. Let's see the code.</p>
+  <div style="margin-left: 25px;" >
+    <code>
+        int marks[5]={20,30,40,50,60};  
+  </code>
+  </div>
+  <p></p>
+<p>In such case, there is no requirement to define the size. So it may also be written as the following code.</p>
+<div style="margin-left: 25px;" >
+    <code>
+        int marks[]={20,30,40,50,60};  
+  </code>
+  </div>
+  <p></p>
+<p>Let's see the C program to declare and initialize the array in C.</p>
+<div style="margin-left: 25px;" >
+    <code>
+      #include &#60;stdio.h&#62;
+        <br> int main()
+        <br> {
+            <br>  int i=0;    
+            <br>    int marks[5]={20,30,40,50,60};//declaration and initialization of array    
+            <br>   //traversal of array    
+             <br>    <br>     for(i=0;i<5;i++){      
+                <br>   printf("%d \n",marks[i]);    
+            <br>    }    
+            <br>     return 0;  
+            <br>   }    
+            <br>  
+                <br>  
+                output :
+                <br>   20
+                <br>30
+                <br>40
+                <br>50
+                <br>65
+  </code>
+  </div>
+  <p></p>
+  <p> <p><h3 class="headerr">Another way of storing data in an array is by user input. :- </h3></p></p>
+<p>We generally use a for loop to store data inside an array(although it can be done without it). The loop runs from 0 which is the first index position to the (size of the array – 1) and the array elements are scanned in the array in a sequential order. Here is the code snippet that shows how this task is performed.</p>
+<div style="margin-left: 25px;" >
+    <code>
+        int a[5],i;
+<br> for(i = 0; i < 5; i++){ 
+   <br> scanf("%d",&a[i]);
+<br> } 
+  </code>
+  </div>
+  <p></p>
+
+  <p> <p><h3 class="headerr">Accessing and Reading the array :- </h3></p></p>
+  <p>The array is easily accessed with the help of the index numbers. Note that if the programmer does not initialize the array or input the data in the array, the array will display garbage values.In the above figure, if we need to access the element ‘G’. We just need to write the array name followed by the ‘subscript’. Eg:</p>
+  <div style="margin-left: 25px;" >
+    <code>
+        name[5]
+  </code>
+  </div>
+  <p></p>
+<p>The [5] is the ‘subscript’ of the array. Subscript is the number in the parentheses following the array name. It indicates the position of the array element in the array. To read all the elements of an array we again use a for loop. The for loop runs from 0 which is the first index position to the size of the array-1 and the printf() function displays all the elements in an array. Here is how it is done:</p>
+
+<div style="margin-left: 25px;" >
+    <code>
+        int i;
+      <br>  for(i = 0; i < 5; i++){
+         <br>   printf("%d",name[i]);
+   <br>     }
+  </code>
+  </div>
+  <p></p>
+<p>let's see an Array program for input and output</p>
+<p>Here is a simple program of array, which adds two arrays and stores the result in another array. One array has already been initialized and the other one will have data input by the user.</p>
+<div style="margin-left: 25px;" >
+    <code>
+      #include &#60;stdio.h&#62;
+        <br> int main()
+        <br> {
+            <br> // we initialize the first array and the second array will have user input
+            <br>// values
+            <br>int a[3] = {1, 34, 5}; // first array initialization
+            <br>int b[3], c[3], i;
+            <br>printf("Enter values in the 3 element 1D array:\n");
+            <br> for (i = 0; i < 3; i++) { // loop for values input
+                <br> scanf("%d", &b[i]);
+                <br> c[i] = a[i] + b[i]; // summing up the values of the two arrays
+                <br>}
+                <br>printf("Resulting array after sum is");
+                <br> // displaying the array elements after summing up
+                <br> for (i = 0; i < 3; i++) {
+                    <br> printf("%d  \n", c[i]);
+    <br>}
+    <br>return 0;
+  <br>}
+  <br>
+  <br>
+  output :
+  <br>
+  Enter values in the 3 element 1D array
+  <br>13
+  <br>9
+  <br>0
+
+<br>Resulting array after sum is :
+<br>14
+<br>43
+<br>5
+
+
+  </code>
+  </div>
+  <p></p>
+  <p> <p><h3 class="headerr">Two Dimensional Array in C :- </h3></p></p>
+<p>A 2D array is like a matrix and has a row and a column of elements ( Although in memory these are stored in contiguous memory locations).</p>
+2D arrays are created to implement a relational database lookalike data structure. It provides ease of holding the bulk of data at once which can be passed to any number of functions wherever required.
+<p>A 1-D array, as we saw is a linear list of data and needed only one index to access the element like a[2]. To access a two-dimensional array we need a pair of indices one for the row and another for the column like a[1][2].</p>
+
+<p>The following figure illustrates the difference between a one-dimensional array and a two-dimensional array:</p>
+<img src="../../../2D-arrays.png" alt=""  style="margin-left: 330px;">
+<p>In the above figure, we can clearly see that the 2D array has two dimensions just like any two-dimensional figure such as a square or a rectangle.</p>
+<p> <p><h2 class="headerr">Declaration of two dimensional Array in C:- </h2></p></p>
+
+<p>The syntax to declare the 2D array is given below.</p>
+<div style="margin-left: 25px;" >
+    <code>
+        data_type array_name[rows][columns];  
+  </code>
+  </div>
+  <p></p>
+<p>Consider the following example.</p>
+<div style="margin-left: 25px;" >
+    <code>
+        int twodimen[4][3];   
+  </code>
+  </div>
+  <p></p>
+  <p>Here, 4 is the number of rows, and 3 is the number of columns.</p>
+ 
+ 
+ 
+  <p> <p><h4 class="headerr">  To initialize and store data in a 2D array in C? </h4></p></p>
+<p>2D array initialization can be done while declaring the array as well. In simple words, we can store certain elements in the array while writing the program i.e. we know which values this array will always store.
+
+    Here are a few examples of initializing a 2D array:</p>
+    <div style="margin-left: 25px;" >
+        <code>
+            //or the format given below
+           <br> int num[3][3]={{25,10,5},{4,6,13},{45,90,78}};
+           <br>int num[3][3]={{25,10,5}, //row0
+           <br>                {4,6,13},  //row1
+           <br>               {45,90,78} //row2
+           <br>             };
+           <br> //this format also stores data in the array but results in a loss of readability
+           <br>int num[2][4]={4,6,8,10,3,5,7,9};
+      </code>
+      </div>
+      <p></p>
+      <p>Another important fact is that when initializing a 2D array, specifying the number of rows of the array is optional but specifying the number of columns of the array is important and mandatory.</p>
+  <p>Like a 1D array, the user can also input the values in the array using a for loop. The only difference is that we use a nested for loop for inserting the elements in a 2D array.</p>
+  <p>There are two ways of insertion: row-wise insertion and column-wise insertion. The typical way of insertion is row-wise insertion.</p>
+  
+  <p> <p><h4 class="headerr">  To access and read data in a 2D array in C? </h4></p></p>
+<p>In case of 2D arrays, we use index numbers(like 1D arrays) in the subscript to access the array elements. The outer loop indicates the row index and the inner loop indicates the column index.
+
+    The following figure shows how the array elements are indexed:</p>
+  <img src="../../../2D-array-indexing.png" alt="" style="margin-left: 330px;">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <p> <p><h4 class="headerr">C 2D array example: Storing elements in a matrix and printing it. </h4></p></p>
+  <div style="margin-left: 25px;" >
+    <code>
+      #include &#60;stdio.h&#62;
+        <br> int main()
+        <br> {
+            <br>   int arr[3][3],i,j;     
+            <br>  for (i=0;i<3;i++)    
+            <br>  {    
+                <br>     for (j=0;j<3;j++)    
+                <br>{    
+                    <br>        printf("Enter a[%d][%d]: ",i,j);                
+                    <br>    scanf("%d",&arr[i][j]);    
+                    <br>}    
+                    <br> }    
+            <br> printf("\n printing the elements ....\n");     
+            <br>  for(i=0;i<3;i++)    
+            <br>   {    
+                <br>    printf("\n");    
+                <br>      for (j=0;j<3;j++)    
+                <br>      {    
+                    <br>      printf("%d\t",arr[i][j]);    
+                    <br>   }    
+                    <br>  }    
+                    <br>  }    
+  <br>
+  <br>
+  output :
+  <br> Enter a[0][0]: 56   
+  <br>  Enter a[0][1]: 10   
+  <br> Enter a[0][2]: 30  
+  <br> Enter a[1][0]: 34  
+  <br> Enter a[1][1]: 21 
+  <br> Enter a[1][2]: 34    
+  
+  <br>Enter a[2][0]: 45
+  <br> Enter a[2][1]: 56
+  <br> Enter a[2][2]: 78  
+  <br>
+  <br> 
+  <br> printing the elements .... 
+ 
+  <br> 56      10      30  
+  <br> 34      21      34  
+  <br> 45      56      78
+
+  </code>
+  </div>
+  <p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Site footer -->
+<footer class="site-footer"  style= "margin-top: 65px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">IT GEEK HUB <i>WANTS TO BE SIMPLE </i> is an initiative, to help the upcoming students with the coding and their subjects. IT GEEK HUB focuses on providing the most efficient code or snippets OR Notes materials as the students wants it to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm and etc.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+            <li><a href="#">TOPICS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+       <a href="#">IT GEEK HUB</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+<script src="../cjs/c.js"></script>
+</body>
+</html>

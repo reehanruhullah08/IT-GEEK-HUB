@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>control statements</title>
+    <!--css-->
+    <link rel="stylesheet" href="../ccss/c.css">
+   
+    <!--box icon-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<!--bootstrap-->
+<link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    
+<body class="bgco">
+    
+    <div class="container-fluid">
+        <div class="row">
+<nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebaropen'></i>
+        <span class="logo">
+            <a href="#">IT GeeK HuB</a>
+        </span>
+            <div class="menu">
+              <div class="logo-toggle">
+                <span class="logo">
+                    <a href="#">IT GeeK HuB</a>
+                    </span>
+                    <i class='bx bx-right-arrow-alt sidebarclose'></i>
+              </div>
+
+               <ul class="nav-links">
+                    <li><a href="../../../home.html">Home</a></li>
+                    <li><a href="../../../courses/cousesindex.html">Topics</a></li>
+                    <li><a href="../../../home.html#games">Games</a></li>
+                    <li><a href="../../../possible_question/poss_quest.html">Important Question</a></li>
+                    <li><a href="../../../contact-form-18/index.html">Contact us</a></li>
+                    <li><a href="../../../signin/Login_v5/index.html">Sign up</a></li>
+                  
+                </ul>
+            </div>
+            <div class="darklight-searchbox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun' ></i>
+                </div>
+            </div>
+     </div>
+</nav>
+</div>
+<div class="row "  style= "margin-top: 65px;margin-left: 20px;">
+    <h1 class="headerr">C - Functions </h1>
+</div>
+
+<p>A function is a group of statements that together perform a task. Every C program has at least one function, which is main(), and all the most trivial programs can define additional functions.</p>
+<p>In c, we can divide a large program into the basic building blocks known as function. The function contains the set of programming statements enclosed by {}. A function can be called multiple times to provide reusability and modularity to the C program. In other words, we can say that the collection of functions creates a program. The function is also known as procedureor subroutinein other programming languages.</p>
+
+<p> <p><h3 class="headerr">Advantage of functions in C :- </h3></p></p>
+<p>There are the following advantages of C functions.</p>
+ 
+<div style="margin-left: 25px;" >
+<li>By using functions, we can avoid rewriting same logic/code again and again in a program.</li>
+<li>We can call C functions any number of times in a program and from any place in a program.</li>
+<li>We can track a large C program easily when it is divided into multiple functions.</li>
+<li>Reusability is the main achievement of C functions.</li>
+<li>However, Function calling is always a overhead in a C program.</li>
+</div>
+
+<p> <p><h3 class="headerr">Function Aspects :- </h3></p></p>
+<p>There are three aspects of a C function.</p>
+
+<div style="margin-left: 25px;" >
+    <li> <b>Function declaration :</b> A function must be declared globally in a c program to tell the compiler about the function name, function parameters, and return type.</li>
+    <li><b>Function call :</b>Function can be called from anywhere in the program. The parameter list must not differ in function calling and function declaration. We must pass the same number of functions as it is declared in the function declaration.</li>
+    <li><b>Function definition : </b>It contains the actual statements which are to be executed. It is the most important aspect to which the control comes when the function is called. Here, we must notice that only one value can be returned from the function.</li>
+    
+    </div>
+
+    <p> <p><h3 class="headerr">Types of Functions :- </h3></p></p>
+<p>Apart from the functions that programmers create according to their requirement, C compilers has some built-in functions that can be used anytime by the programmer. C Programming Language has two types of functions:</p>
+<div style="margin-left: 25px;" >
+<li>Built-in Functions/library Functions</li>
+<li>User-defined Functions</li>
+</div>
+
+
+<p> <p><h4 class="headerr">Library Functions :- </h4></p></p>
+<p>Library functions are the inbuilt function in C that are grouped and placed at a common place called the library. Such functions are used to perform some specific operations. For example, printf is a library function used to print on the console. The library functions are created by the designers of compilers. All C standard library functions are defined inside the different header files saved with the extension .h. We need to include these header files in our program to make use of the library functions defined in such header files. For example, To use the library functions such as printf/scanf we need to include stdio.h in our program which is a header file that contains all the library functions regarding standard input/output.</p>
+<p>There functions are already defined in the C compilers. They are used for String handling, I/O operations, etc. These functions are defined in the header file. To use these functions we need to import the specific header files.</p>
+<br>
+ <p>The library function <stdio.h> includes these common functions(there are many other functions too):</p>
+    <div style="margin-left: 25px;" >
+        
+         <li><b>printf() :</b> shows the output in the user’s format.</li>
+<li><b>scanf() :</b> used to take the user’s input which can be a character, numeric value, string,etc.</li>
+<li><b>getchar() :</b> takes character input from the user.</li>   
+<li><b>gets() :</b> reads a line.</li>
+</div>
+<p>The library function <math.h> includes these common functions(there are many other functions too):</p>
+
+    <div style="margin-left: 25px;" >
+        <li>pow() finds the power of the given number.</li>
+    <li>sin() finds the sine of the given number.</li>
+    <li>exp() finds the exponent of the given number.</li>
+    <li>cos() finds the cosine of the given number.</li>
+    <li>sqrt() finds the square root of the number.</li>
+    <li>log() finds the logarithmic value of the number.</li>
+    </div>
+
+<p>The list of mostly used header files is given in the following table.</p>
+<table class="alt">
+  <tr><th>Header file</th><th>Description</th></tr>
+  <tr><td style="color: black;"><b>stdio.h</b></td><td> This is a standard input/output header file. It contains all the library functions regarding standard input/output.</td></tr>
+  <tr><td>conio.h</td><td>This is a console input/output header file.</td></tr>
+  
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Site footer -->
+<footer class="site-footer"  style= "margin-top: 65px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">IT GEEK HUB <i>WANTS TO BE SIMPLE </i> is an initiative, to help the upcoming students with the coding and their subjects. IT GEEK HUB focuses on providing the most efficient code or snippets OR Notes materials as the students wants it to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm and etc.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+            <li><a href="#">TOPICS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+       <a href="#">IT GEEK HUB</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+<script src="../cjs/c.js"></script>
+</body>
+</html>
