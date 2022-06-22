@@ -393,7 +393,55 @@ transition: all 0.3s ease;
 }
 
 
+table.alt tr:nth-child(even) {
+  
+  background-color: rgb(245, 241, 241);
+  color: rgb(10, 10, 10);
+  
+}
 
+table.alt tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+  
+}
+
+table.alt,table.alt td {
+  border: 1px solid #c7ccbe;
+  text-align: left
+  
+}
+
+table.alt {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 70%
+}
+
+table.alt td {
+  padding: 8px;
+  vertical-align: top
+  
+}
+
+table.alt th {
+  color: #000;
+  background-color: #c7ccbe;
+  font-size: 17px;
+  font-family: times new roman;
+  padding: 12px;
+  vertical-align: top;
+  text-align: left
+}
+
+
+.headerr a{
+  text-decoration: none;
+  color:white;
+  pointer-events: none;
+}
 
 
 
@@ -458,4 +506,14 @@ transition: all 0.3s ease;
                 font-family: sans-serif;
                 font-size: .8rem;
             }
+            .img12{
+              height:200px;
+              width:300px;
+            }
+        }
+        @media (max-width:820px){
+          .img12{
+            height:200px;
+            width:300px;
+          }
         }

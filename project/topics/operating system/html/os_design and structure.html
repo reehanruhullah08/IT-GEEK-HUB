@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating System</title>
+    <!--css-->
+    <link rel="stylesheet" href="../css/os.css">
+   
+    <!--box icon-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<!--bootstrap-->
+<link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    
+<body class="bgco">
+    
+    <div class="container-fluid">
+        <div class="row">
+<nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebaropen'></i>
+        <span class="logo">
+            <a href="#">IT GeeK HuB</a>
+        </span>
+            <div class="menu">
+              <div class="logo-toggle">
+                <span class="logo">
+                    <a href="#">IT GeeK HuB</a>
+                    </span>
+                    <i class='bx bx-right-arrow-alt sidebarclose'></i>
+              </div>
+
+               <ul class="nav-links">
+                    <li><a href="../../../home.html">Home</a></li>
+                    <li><a href="../../../courses/cousesindex.html">Topics</a></li>
+                    <li><a href="../../../home.html#games">Games</a></li>
+                    <li><a href="../../../possible_question/poss_quest.html">Important Question</a></li>
+                    <li><a href="../../../contact-form-18/index.html">Contact us</a></li>
+                    <li><a href="../../../signin/Login_v5/index.html">Sign up</a></li>
+                  
+                </ul>
+            </div>
+            <div class="darklight-searchbox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun' ></i>
+                </div>
+            </div>
+     </div>
+</nav>
+</div>
+<div class="row "  style= "margin-top: 65px;margin-left: 20px;">
+    <h1 class="headerr"> Operating System Design and Implementation</h1>
+</div>
+<br>
+<p>An operating system is a construct that allows the user application programs to interact with the system hardware. Operating system by itself does not provide any function but it provides an atmosphere in which different applications and programs can do useful work.</p>
+<p>There are many problems that can occur while designing and implementing an operating system. These are covered in operating system design and implementation.</p>
+<img src="../images/Operating System Design.png" alt="">
+<p> <p><h4 class="headerr"> Operating System Design Goals  : </h4></p></p>
+<p>It is quite complicated to define all the goals and specifications of the operating system while designing it.The design changes depending on the type of the operating system i.e if it is batch system, time shared system, single user system, multi user system, distributed system etc.</p>
+<p>There are basically two types of goals while designing an operating system. These are</p>
+<div style="margin-left: 25px;">
+    <li>User Goals</li>
+    <p>The operating system should be convenient, easy to use, reliable, safe and fast according to the users. However, these specifications are not very useful as there is no set method to achieve these goals.</p>
+    <li>System Goals</li>
+    <p>The operating system should be easy to design, implement and maintain. These are specifications required by those who create, maintain and operate the operating system. But there is not specific method to achieve these goals as well.</p>
+    </div>
+
+<p> <p><h4 class="headerr"> Operating System Mechanisms and Policies  : </h4></p></p>
+<p>There is no specific way to design an operating system as it is a highly creative task. However, there are general software principles that are applicable to all operating systems.</p>
+<p>A subtle difference between mechanism and policy is that mechanism shows how to do something and policy shows what to do. Policies may change over time and this would lead to changes in mechanism. So, it is better to have a general mechanism that would require few changes even when a policy change occurs.</p>
+
+<p>For example - If the mechanism and policy are independent, then few changes are required in mechanism if policy changes. If a policy favours I/O intensive processes over CPU intensive processes, then a policy change to preference of CPU intensive processes will not change the mechanism.</p>
+
+<p> <p><h4 class="headerr"> Operating System Implementation : </h4></p></p>
+<p>The operating system needs to be implemented after it is designed. Earlier they were written in assembly language but now higher level languages are used. The first system not written in assembly language was the Master Control Program (MCP) for Burroughs Computers.</p>
+<p>Advantages of Higher Level Language :</p>
+<p>here are multiple advantages to implementing an operating system using a higher level language such as: the code is written more fast, it is compact and also easier to debug and understand. Also, the operating system can be easily moved from one hardware to another if it is written in a high level language.</p>
+
+<p>Disadvantages of Higher Level Language</p>
+<p>Using high level language for implementing an operating system leads to a loss in speed and increase in storage requirements. However in modern systems only a small amount of code is needed for high performance, such as the CPU scheduler and memory manager. Also, the bottleneck routines in the system can be replaced by assembly language equivalents if required.
+
+</p>
+
+<p> <p><h1 class="headerr"> Operating System Structure  : </h1></p></p>
+<p>Operating system can be implemented with the help of various structures. The structure of the OS depends mainly on how the various common components of the operating system are interconnected and melded into the kernel. Depending on this we have following structures of the operating system: </p>
+
+<p> <p><h4 class="headerr"> Simple structure:</h4></p></p>
+<p>Such operating systems do not have well defined structure and are small, simple and limited systems. The interfaces and levels of functionality are not well separated. MS-DOS is an example of such operating system. In MS-DOS application programs are able to access the basic I/O routines. These types of operating system cause the entire system to crash if one of the user programs fails.</p>
+<img src="../images/ossimpstruc.png" alt="">
+<p> <p><h5 class="headerr"> Advantages of Simple structure: </h5></p></p>
+<div style="margin-left: 25px;">
+    <li>It delivers better application performance because of the few interfaces between the application program and the hardware.</li>
+    <li>Easy for kernel developers to develop such an operating system.</li>
+    </div>
+
+    <p> <p><h5 class="headerr"> Disadvantages of Simple structure: </h5></p></p>
+<div style="margin-left: 25px;">
+    <li>The structure is very complicated as no clear boundaries exists between modules.</li>
+    <li>It does not enforce data hiding in the operating system.</li>
+    </div>
+
+    <p> <p><h4 class="headerr"> Layered structure: </h4></p></p>
+<p>An OS can be broken into pieces and retain much more control on system. In this structure the OS is broken into number of layers (levels). The bottom layer (layer 0) is the hardware and the topmost layer (layer N) is the user interface. These layers are so designed that each layer uses the functions of the lower level layers only. This simplifies the debugging process as if lower level layers are debugged and an error occurs during debugging then the error must be on that layer only as the lower level layers have already been debugged. </p>
+<p>The main disadvantage of this structure is that at each layer, the data needs to be modified and passed on which adds overhead to the system. Moreover careful planning of the layers is necessary as a layer can use only lower level layers. UNIX is an example of this structure. </p>
+<img src="../images/layeros.png" alt="">
+<p> <p><h5 class="headerr"> Advantages of Layered structure:</h5></p></p>
+<div style="margin-left: 25px;">
+    <li> Layering makes it easier to enhance the operating system as implementation of a layer can be changed easily without affecting the other layers.</li>
+    <li>    It is very easy to perform debugging and system verification.</li>
+    </div>
+
+
+    <p> <p><h5 class="headerr"> Disadvantages of Layered structure:</h5></p></p>
+    <div style="margin-left: 25px;">
+        <li>  In this structure the application performance is degraded as compared to simple structure.</li>
+        <li>   It requires careful planning for designing the layers as higher layers use the functionalities of only the lower layers.</li>
+        </div>
+   
+        <p> <p><h4 class="headerr"> Micro-kernel:  </h4></p></p>
+ <p>This structure designs the operating system by removing all non-essential components from the kernel and implementing them as system and user programs. This result in a smaller kernel called the micro-kernel. </p>
+    <p>Advantages of this structure are that all new services need to be added to user space and does not require the kernel to be modified. Thus it is more secure and reliable as if a service fails then rest of the operating system remains untouched. Mac OS is an example of this type of OS. </p>    
+ <img src="../images/micro.png" alt="">
+    <p> <p><h5 class="headerr"> Advantages of Micro-kernel structure:</h5></p></p>
+ <div style="margin-left: 25px;">
+            <li>  It makes the operating system portable to various platforms.
+                </li>
+            <li>  As microkernels are small so these can be tested effectively.</li>
+            </div>
+ <p> <p><h5 class="headerr"> Disadvantages of Micro-kernel structure:</h5></p></p>
+            <div style="margin-left: 25px;">
+                <li> Increased level of inter module communication degrades system performance. </li>
+                      
+                       </div>
+
+      <p> <p><h4 class="headerr">Modular structure or approach:   </h4></p></p>
+<p>It is considered as the best approach for an OS. It involves designing of a modular kernel. The kernel has only set of core components and other services are added as dynamically loadable modules to the kernel either during run time or boot time. It resembles layered structure due to the fact that each kernel has defined and protected interfaces but it is more flexible than the layered structure as a module can call any other module. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Site footer -->
+<footer class="site-footer"  style= "margin-top: 65px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">IT GEEK HUB <i>WANTS TO BE SIMPLE </i> is an initiative, to help the upcoming students with the coding and their subjects. IT GEEK HUB focuses on providing the most efficient code or snippets OR Notes materials as the students wants it to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm and etc.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+            <li><a href="#">TOPICS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+       <a href="#">IT GEEK HUB</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+<script src="../js/os.js"></script>
+</body>
+</html>
