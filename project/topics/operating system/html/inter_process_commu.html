@@ -106,7 +106,7 @@
 <p>In this type of communication process, usually, a link is created or established between two communicating processes. However, in every pair of communicating processes, only one link can exist.</p>
 
 
-<p> <p><h4 class="headerr">Indirect Communication </h4></p></p>
+<p> <p><h4 class="headerr">Indirect Communication </h4></p></p><p> <p><h4 class="headerr">Indirect Communication </h4></p></p>
 <p>Indirect communication can only exist or be established when processes share a common mailbox, and each pair of these processes shares multiple communication links. These shared links can be unidirectional or bi-directional.</p>
 
 <p> <p><h4 class="headerr">FIFO:-</h4></p></p>
@@ -124,9 +124,147 @@
 
   
   <p> <p><h1 class="headerr" ><a href="" name="thread">Threads</a ></h1></p></p>
+  <p>A thread is the subset of a process and is also known as the lightweight process. A process can have more than one thread, and these threads are managed independently by the scheduler. All the threads within one process are interrelated to each other. Threads have some common information, such as data segment, code segment, files, etc., that is shared to their peer threads. But contains its own registers, stack, and counter.</p>
+  <img src="../images/thread.png" alt="">
+
+
+
+
+  <p> <p><h3 class="headerr">How does thread work?</h3></p></p>
+<p>As we have discussed that a thread is a subprocess or an execution unit within a process. A process can contain a single thread to multiple threads. A thread works as follows:</p>
+<div style="margin-left: 50px;" >
+<li>When a process starts, OS assigns the memory and resources to it. Each thread within a process shares the memory and resources of that process only.</li>
+<li>Threads are mainly used to improve the processing of an application. In reality, only a single thread is executed at a time, but due to fast context switching between threads gives an illusion that threads are running parallelly.</li>
+<li>If a single thread executes in a process, it is known as a single-threaded And if multiple threads execute simultaneously, then it is known as multithreading.</li>
+</div>
+<p> <p><h3 class="headerr" >Types of Threads</h3></p></p>
+<p>There are two types of threads, which are:</p>
+<p> <p><h4 class="headerr" >User Level Thread</h4></p></p>
+<p>As the name suggests, the user-level threads are only managed by users, and the kernel does not have its information.
+
+  These are faster, easy to create and manage.
   
   
+  The kernel takes all these threads as a single process and handles them as one process only.
   
+  The user-level threads are implemented by user-level libraries, not by the system calls.</p>
+
+  <p> <p><h4 class="headerr" >Kernel-Level Thread</h4></p></p>
+<p>The kernel-level threads are handled by the Operating system and managed by its kernel. These threads are slower than user-level threads because context information is managed by the kernel. To create and implement a kernel-level thread, we need to make a system call.</p>
+
+
+
+<p> <p><h3 class="headerr" >Features of Thread</h3></p></p>
+  <div style="margin-left: 50px;" >
+    <li>Threads share data, memory, resources, files, etc., with their peer threads within a process.</li>
+<li>One system call is capable of creating more than one thread.</li>  
+  <li>Each thread has its own stack and register.</li>
+  <li>Threads can directly communicate with each other as they share the same address space.</li>
+  <li>Threads need to be synchronized in order to avoid unexpected scenarios.</li>
+  
+  </div>
+  <p> <p><h1 class="headerr" >Process</h1></p></p>
+<p>A process is an instance of a program that is being executed. When we run a program, it does not execute directly. It takes some time to follow all the steps required to execute the program, and following these execution steps is known as a process.
+
+</p>
+<p>A process can create other processes to perform multiple tasks at a time; the created processes are known as clone or child process, and the main process is known as the parent process. Each process contains its own memory space and does not share it with the other processes. It is known as the active entity. A typical process remains in the below form in memory.</p>
+<p>A process in OS can remain in any of the following states:</p>
+<div style="margin-left: 50px;" >
+  <li>NEW: A new process is being created.</li>
+<li>READY: A process is ready and waiting to be allocated to a processor.</li>
+<li>RUNNING: The program is being executed.</li>
+<li>WAITING: Waiting for some event to happen or occur.</li>
+<li>TERMINATED: Execution finished.</li>
+</div>
+
+  <p> <p><h3 class="headerr">How does Processes work?</h3></p></p>
+  <p>When we start executing the program, the processor begins to process it. It takes the following steps:</p>
+  <div style="margin-left: 50px;" >
+  <li> Firstly, the program is loaded into the computer's memory in binary code after translation.</li>
+  <li>A program requires memory and other OS resources to run it. The resources such that registers, program counter, and a stack, and these resources are provided by the OS.</li>
+  <li>A register can have an instruction, a storage address, or other data that is required by the process.</li>
+  <li>The program counter maintains the track of the program sequence.</li>
+<li>The stack has information on the active subroutines of a computer program.</li>  
+<li>A program may have different instances of it, and each instance of the running program is knowns as the individual process.</li>
+
+</div>
+
+<p> <p><h3 class="headerr">Features of Process</h3></p></p>
+<div style="margin-left: 50px;" >
+<li>Each time we create a process, we need to make a separate system call for each process to the OS. The fork() function creates the process.</li>
+<li>Each process exists within its own address or memory space.</li>
+<li>Processes need IPC (Inter-process Communication) in order to communicate with each other.</li>
+<li>Each process is independent and treated as an isolated process by the OS.</li>
+<li>A proper synchronization between processes is not required</li>
+
+
+
+</div>
+
+<p> <p><h3 class="headerr">Key Differences Between Process and Thread</h3></p></p>
+<div style="margin-left: 50px;" >
+<li>A process is independent and does not contained within another process, whereas all threads are logically contained within a process.</li>
+<li>Processes are heavily weighted, whereas threads are light-weighted.</li>
+<li>A process can exist individually as it contains its own memory and other resources, whereas a thread cannot have its individual existence.</li>
+<li>A proper synchronization between processes is not required. In contrast, threads need to be synchronized in order to avoid unexpected scenarios.</li>
+<li>Processes can communicate with each other using inter-process communication only; in contrast, threads can directly communicate with each other as they share the same address space.</li>
+
+</div>
+
+
+
+
+
+<p> <p><h3 class="headerr">Difference Table Between Process and Thread</h3></p></p>
+<table class="alt">
+  <tr><th>Process</th><th>	Thread</th></tr>
+  <tr><td style="color: black;"><b>A process is an instance of a program that is being executed or processed.</b></td><td>Thread is a segment of a process or a lightweight process that is managed by the scheduler independently.</td></tr>
+  <tr><td>Processes are independent of each other and hence don't share a memory or other resources.</td><td>Threads are interdependent and share memory.</td></tr>
+  <tr><td style="color: black;">Each process is treated as a new process by the operating system.</td><td>	The operating system takes all the user-level threads as a single process.</td></tr>
+  <tr><td><b>If one process gets blocked by the operating system, then the other process can continue the execution.</b></td><td>If any user-level thread gets blocked, all of its peer threads also get blocked because OS takes all of them as a single process.</td></tr>
+  <tr><td style="color: black;">Context switching between two processes takes much time as they are heavy compared to thread.</td><td>Context switching between the threads is fast because they are very lightweight.</td></tr>
+  <tr><td>The data segment and code segment of each process are independent of the other.</td><td>Threads share data segment and code segment with their peer threads; hence are the same for other threads also.</td></tr>
+  <tr><td style="color: black;"><b>The operating system takes more time to terminate a process.</b></td><td>Threads can be terminated in very little time.</td></tr>
+  
+  </table>
+  <p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
 
 
 

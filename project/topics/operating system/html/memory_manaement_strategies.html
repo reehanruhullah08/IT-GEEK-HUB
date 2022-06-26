@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating System</title>
+    <!--css-->
+    <link rel="stylesheet" href="../css/os.css">
+   
+    <!--box icon-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<!--bootstrap-->
+<link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    
+<body class="bgco">
+    
+    <div class="container-fluid">
+        <div class="row">
+<nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebaropen'></i>
+        <span class="logo">
+            <a href="#">IT GeeK HuB</a>
+        </span>
+            <div class="menu">
+              <div class="logo-toggle">
+                <span class="logo">
+                    <a href="#">IT GeeK HuB</a>
+                    </span>
+                    <i class='bx bx-right-arrow-alt sidebarclose'></i>
+              </div>
+
+               <ul class="nav-links">
+                    <li><a href="../../../home.html">Home</a></li>
+                    <li><a href="../../../courses/cousesindex.html">Topics</a></li>
+                    <li><a href="../../../home.html#games">Games</a></li>
+                    <li><a href="../../../possible_question/poss_quest.html">Important Question</a></li>
+                    <li><a href="../../../contact-form-18/index.html">Contact us</a></li>
+                    <li><a href="../../../signin/Login_v5/index.html">Sign up</a></li>
+                  
+                </ul>
+            </div>
+            <div class="darklight-searchbox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun' ></i>
+                </div>
+            </div>
+     </div>
+</nav>
+</div>
+<div class="row "  style= "margin-top: 65px;">
+    <h1 class="headerr"> MEMORY MANAGEMENT STRATEGIES</h1>
+</div>
+<p>Memory management function of operating system helps in allocating the main memory space to the processes and their data at the time of their execution. </p>
+<p>The following are the three key memory management techniques used by an operating system:</p>
+<div style="margin-left: 50px;" >
+<li>Segmentation</li>
+<li>Paging</li>
+<li>Swapping</li>
+
+</div>
+<p> <p><h3 class="headerr">Segmentation</h3></p></p>
+<p>Segmentation refers to the technique of dividing the physical memory space into multiple blocks. Each block has specific length and is known as a segment. Each segment has a starting address called the base address. The length of the segment determines the availability memory space in the segment.
+</p>
+<img src="../images/segmentation OS.jpg" alt="">
+<p>The above figure shows the organization of segment in memory unit.</p>
+<p>The location of data values stored in the segment can be determined by the distance of actual position of data value from base address of the segment. The distance between the actual position of data and the base address of segment is known as displacement or offset value. In other words, when there is a need to obtain data from required segmented memory then the actual address of data is calculated by adding the base address of the segment with offset value.
+</p>
+<p>
+    The base address of the segment and the offset value is specified in a program instruction itself. The following figure shows how the actual position of an operand in a segment is obtained by adding the base address and offset value.
+    </p>
+<img src="../images/segmentation OS 2.jpg" alt="">
+
+
+<p> <p><h3 class="headerr">Paging</h3></p></p>
+<p>Paging is a technique that eliminates the requirements of contiguous allocation of main memory. In this, the main memory is divided into fixed-size blocks of physical memory called frames. The size of a frame should be kept the same as that of a page to maximize the main memory and avoid external fragmentation.
+    A computer can address more memory than the amount physically installed on the system. This extra memory is actually called virtual memory and it is a section of a hard that's set up to emulate the computer's RAM. Paging technique plays an important role in implementing virtual memory.
+    </p>
+<p>Paging is a memory management technique in which process address space is broken into blocks of the same size called pages (size is power of 2, between 512 bytes and 8192 bytes). The size of the process is measured in the number of pages.
+</p>
+<p>Similarly, main memory is divided into small fixed-sized blocks of (physical) memory called frames and the size of a frame is kept the same as that of a page to have optimum utilization of the main memory and to avoid external fragmentation.
+</p>
+<img src="../images/paging 1 OS.jpg" alt="">
+<br>
+<p> <p><h4 class="headerr">Address Translation</h4></p></p>
+
+<p>Page address is called logical address and represented by page number and the offset.
+</p>
+<div style="margin-left: 25px;">
+    <code>
+        Physical Address = Frame number + page offset
+    </code>
+</div>
+<br>
+<p>A data structure called page map table is used to keep track of the relation between a page of a process to a frame in physical memory.
+</p>
+<img src="../images/paging 2 OS.jpg" alt="">
+
+<p> <p><h3 class="headerr">Swapping</h3></p></p>
+<p>Swapping is a mechanism in which a process can be swapped temporarily out of main memory (or move) to secondary storage (disk) and make that memory available to other processes. At some later time, the system swaps back the process from the secondary storage to main memory.
+</p>
+<p>Though performance is usually affected by swapping process but it helps in running multiple and big processes in parallel and that's the reason Swapping is also known as a technique for memory compaction.
+</p>
+<img src="../images/swapping 1 OS.jpg" alt="">
+<p></p>
+<p>
+    The total time taken by swapping process includes the time it takes to move the entire process to a secondary disk and then to copy the process back to memory, as well as the time the process takes to regain main memory.
+    </p>
+<p>Let us assume that the user process is of size 2048KB and on a standard hard disk where swapping will take place has a data transfer rate around 1 MB per second. The actual transfer of the 1000K process to or from memory will take
+</p>
+<div style="margin-left: 25px;">
+    <code>
+
+    
+        2048KB / 1024KB per second
+        <br>= 2 seconds
+        <br>= 2000 milliseconds
+        </code>
+    </div>
+<p></p>
+<p>Now considering in and out time, it will take complete 4000 milliseconds plus other overhead where the process competes to regain main memory.
+</p>
+
+<p> <p><h2 class="headerr">CONTIGUOUS MEMORY ALLOCATION</h2></p></p>
+<p>In Contiguous memory allocation which is a memory management technique, whenever there is a request by the user process for the memory then a single section of the contiguous memory block is given to that process according to its requirement. Contiguous Memory allocation is achieved just by dividing the memory into the fixed-sized partition.
+</p>
+<p>
+    The memory can be divided either in the fixed-sized partition or in the variable-sized partition in order to allocate contiguous space to user processes.
+    </p>
+<img src="../images/contiguous 1 OS.png" alt="">
+<p></p>
+<p> <p><h4 class="headerr">Fixed-size Partition Scheme</h4></p></p>
+
+<p>This technique is also known as Static partitioning. In this scheme, the system divides the memory into fixed-size partitions. The partitions may or may not be the same size. The size of each partition is fixed as indicated by the name of the technique and it cannot be changed.
+</p>
+<p>
+    In this partition scheme, each partition may contain exactly one process. There is a problem that this technique will limit the degree of multiprogramming because the number of partitions will basically decide the number of processes.
+    </p>
+<p>
+    Whenever any process terminates then the partition becomes available for another process.
+    </p>
+<p>Let's take an example of fixed size partitioning scheme, we will divide a memory size of 15 KB into fixed-size partitions:
+</p>
+<img src="../images/contiguous 2 OS.png" alt="">
+<p></p>
+<p>
+    If there is some wastage inside the partition then it is termed Internal Fragmentation.
+    </p>
+    <img src="../images/contiguous 3 OS.png" alt="">
+<p></p>
+    <p> <p><h4 class="headerr">Variable-size Partition Scheme</h4></p></p>
+<p>This scheme is also known as Dynamic partitioning and is came into existence to overcome the drawback i.e internal fragmentation that is caused by Static partitioning. In this partitioning, scheme allocation is done dynamically.
+</p>
+<p>
+    The size of the partition is not declared initially. Whenever any process arrives, a partition of size equal to the size of the process is created and then allocated to the process. Thus the size of each partition is equal to the size of the process.
+    </p>
+<p>As partition size varies according to the need of the process so in this partition scheme there is no internal fragmentation.
+</p>
+<img src="../images/contiguous 4 OS.png" alt="">
+<p></p>
+
+<p> <p><h2 class="headerr">VIRTUAL MEMORY MANAGEMENT</h2></p></p>
+<p> <p><h4 class="headerr">What is Virtual Memory?</h4></p></p>
+<p>Virtual Memory is a storage mechanism which offers user an illusion of having a very big main memory. It is done by treating a part of secondary memory as the main memory. In Virtual memory, the user can store processes with a bigger size than the available main memory.
+</p>
+<p>Therefore, instead of loading one long process in the main memory, the OS loads the various parts of more than one process in the main memory. Virtual memory is mostly implemented with demand paging and demand segmentation.
+</p>
+
+<p> <p><h4 class="headerr">What is Virtual Memory?</h4></p></p>
+<p>Here, are reasons for using virtual memory:
+</p>
+<p>Whenever your computer doesn’t have space in the physical memory it writes what it needs to remember to the hard disk in a swap file as virtual memory.
+    If a computer running Windows needs more memory/RAM, then installed in the system, it uses a small portion of the hard drive for this purpose.
+    </p>
+
+    <p> <p><h4 class="headerr">How Virtual Memory Works?</h4></p></p>
+<p>In the modern world, virtual memory has become quite common these days. It is used whenever some pages require to be loaded in the main memory for the execution, and the memory is not available for those many pages.
+</p>
+<p>So, in that case, instead of preventing pages from entering in the main memory, the OS searches for the RAM space that are minimum used in the recent times or that are not referenced into the secondary memory to make the space for the new pages in the main memory.
+</p>
+<p> <p><h3 class="headerr">DEMAND PAGING</h3></p></p>
+<img src="../images/demand paging 1 OS.webp" alt="">
+<p></p>
+<p>
+    A demand paging mechanism is very much similar to a paging system with swapping where processes stored in the secondary memory and pages are loaded only on demand, not in advance.
+    </p>
+<p>So, when a context switch occurs, the OS never copy any of the old program’s pages from the disk or any of the new program’s pages into the main memory. Instead, it will start executing the new program after loading the first page and fetches the program’s pages, which are referenced.
+</p>
+<p>
+    During the program execution, if the program references a page that may not be available in the main memory because it was swapped, then the processor considers it as an invalid memory reference. That’s because the page fault and transfers send control back from the program to the OS, which demands to store page back into the memory.
+    </p>
+
+
+
+
+    <p> <p><h3 class="headerr">TYPES OF PAGE REPLACEMENT</h3></p></p>
+    <p> <p><h4 class="headerr">1.First-In-First-Out (FIFO)</h4></p></p>
+<p>With the FIFO algorithm, the OS maintains a queue to keep track of all the pages in memory, with the most recent arrival at the back (tail of the queue), and the oldest arrival in front (head of the queue). When the system needs space, a page will be replaced. With FIFO, the page at the front of the queue (the oldest page) is selected for replacement. However, FIFO is known to suffer from a problem known as Belady's anomaly, which occurs when increasing the number of page frames results in an increase in the number of page faults for a given memory access pattern.
+</p>
+<p>Example
+</p>
+<img src="../images/fifo 1 OS.jpg" alt="">
+<code style="margin-left: 25px;" >Total Page Fault = 9</code>
+<p>Initially, all 4 slots are empty, so when 1, 2, 3, 4 came they are allocated to the empty slots in order of their arrival. This is page fault as 1, 2, 3, 4 are not available in memory.
+</p>
+<p>
+    When 5 comes, it is not available in memory so page fault occurs and it replaces the oldest page in memory, i.e., 1.
+    </p>
+<p>When 1 comes, it is not available in memory so page fault occurs and it replaces the oldest page in memory, i.e., 2.
+</p>
+<p>
+    When 3,1 comes, it is available in the memory, i.e., Page Hit, so no replacement occurs.
+    </p>
+<p>
+    When 6 comes, it is not available in memory so page fault occurs and it replaces the oldest page in memory, i.e., 3.
+    </p>
+<p>
+    When 3 comes, it is not available in memory so page fault occurs and it replaces the oldest page in memory, i.e., 4.
+    </p>
+<p>When 2 comes, it is not available in memory so page fault occurs and it replaces the oldest page in memory, i.e., 5.
+</p>
+
+<p>When 3 comes, it is available in the memory, i.e., Page Hit, so no replacement occurs.
+</p>
+<code style="margin-left: 25px;" >Page Fault ratio = 9/12 i.e. total miss/total possible cases</code>
+<p> <p><h5 class="headerr">Advantages</h5></p></p>
+<div style="margin-left: 25px;">
+    <li>Simple and easy to implement.</li>
+<li>Low overhead.</li>
+</div>
+<div style="margin-left: 25px;">
+    <li>Poor performance.</li>
+    <li>Doesn’t consider the frequency of use or last used time, simply replaces the oldest page.</li>
+    <li>Suffers from Belady’s Anomaly(i.e. more page faults when we increase the number of page frames).</li>
+
+
+</div>
+<p> <p><h4 class="headerr">2.Least Recently Used (LRU)</h4></p></p>
+<p>Least Recently Used page replacement algorithm keeps track of page usage over a short period of time. It works on the idea that the pages that have been most heavily used in the past are most likely to be used heavily in the future too.
+</p>
+<p>In LRU, whenever page replacement happens, the page which has not been used for the longest amount of time is replaced.
+</p>
+<p>For Example</p>
+<img src="../images/LRU 1 OS.jpg" alt="">
+<code style="margin-left: 25px;" >total Page Fault = 8</code>
+<p></p>
+<p>Initially, all 4 slots are empty, so when 1, 2, 3, 4 came they are allocated to the empty slots in order of their arrival. This is page fault as 1, 2, 3, 4 are not available in memory.
+</p>
+
+<p>
+    When 5 comes, it is not available in memory so page fault occurs and it replaces 1 which is the least recently used page.
+    </p>
+
+<p>
+    When 1 comes, it is not available in memory so page fault occurs and it replaces 2.
+    </p>
+
+<p>When 3,1 comes, it is available in the memory, i.e., Page Hit, so no replacement occurs.
+</p>
+
+
+<p>When 6 comes, it is not available in memory so page fault occurs and it replaces 4.
+</p>
+
+
+<p>
+    When 3 comes, it is available in the memory, i.e., Page Hit, so no replacement occurs.
+    </p>
+
+
+<p>
+    When 2 comes, it is not available in memory so page fault occurs and it replaces 5.
+    </p>
+<p>
+    When 3 comes, it is available in the memory, i.e., Page Hit, so no replacement occurs.
+    </p>
+    <code style="margin-left: 25px;" >Page Fault ratio = 8/12</code>
+<p></p>
+<p> <p><h5 class="headerr">Advantages</h5></p></p>
+<div style="margin-left: 25px;">
+    <li>Efficient.</li>
+<li>Doesn't suffer from Belady’s Anomaly.</li>
+</div>
+<p> <p><h5 class="headerr">Disadvantages</h5></p></p>
+<div style="margin-left: 25px;">
+    <li>Complex Implementation.</li>
+<li>Expensive.</li>
+<li>Requires hardware support.</li>
+</div>
+
+
+<p> <p><h4 class="headerr">3.Optimal Page Replacement</h4></p></p>
+<p>Optimal Page Replacement algorithm is the best page replacement algorithm as it gives the least number of page faults. It is also known as OPT, clairvoyant replacement algorithm, or Belady’s optimal page replacement policy.
+</p>
+<p>
+    In this algorithm, pages are replaced which would not be used for the longest duration of time in the future, i.e., the pages in the memory which are going to be referred farthest in the future are replaced.
+    </p>
+<p>
+    This algorithm was introduced long back and is difficult to implement because it requires future knowledge of the program behaviour. However, it is possible to implement optimal page replacement on the second run by using the page reference information collected on the first run.
+    </p>
+
+<p><b>For Example:-
+</b></p>
+<img src="../images/OPR 1 OS.jpg" alt="">
+<br><p></p>
+<code style="margin-left: 25px;" >Total Page Fault = 6</code>
+<p></p>
+<p>Initially, all 4 slots are empty, so when 1, 2, 3, 4 came they are allocated to the empty slots in order of their arrival. This is page fault as 1, 2, 3, 4 are not available in memory.
+</p>
+<p>
+    When 5 comes, it is not available in memory so page fault occurs and it replaces 4 which is going to be used farthest in the future among 1, 2, 3, 4.
+    </p>
+
+
+<p>
+    When 1,3,1 comes, they are available in the memory, i.e., Page Hit, so no replacement occurs.
+    </p>
+
+
+<p>
+    When 6 comes, it is not available in memory so page fault occurs and it replaces 1.
+    </p>
+
+
+
+<p>
+    When 3, 2, 3 comes, it is available in the memory, i.e., Page Hit, so no replacement occurs.
+    </p>
+
+    <code style="margin-left: 25px;" >
+        Page Fault ratio = 6/12
+        </code>
+    <p></p>
+
+    <p> <p><h5 class="headerr">Advantages</h5></p></p>
+    <div style="margin-left: 25px;">
+        <li>Easy to Implement.</li>
+    <li>Simple data structures are used.</li>
+    <li>Highly efficient.</li>
+    </div>
+    <p></p>
+    <p> <p><h5 class="headerr">Disadvantages</h5></p></p>
+    <div style="margin-left: 25px;">
+        <li>Requires future knowledge of the program.</li>
+    <li>Time-consuming.</li>
+  
+    </div>
+
+    <p> <p><h2 class="headerr">THRASHING</h2></p></p>
+
+    <p> <p><h4 class="headerr">What is thrashing?</h4></p></p>
+<p>A state in which the CPU performs lesser “productive” work and more “swapping” is known as thrashing. 
+</p>
+<p>
+    It occurs when there are too many pages in the memory and each page refers to another one.
+    </p>
+<p>
+    The CPU is busy swapping and hence its utilization falls. 
+    </p>
+
+
+    <p> <p><h4 class="headerr">What are the causes of thrashing?</h4></p></p>
+<p>
+    The process scheduling mechanism tries to load many processes in the system at a time and hence the degree of multiprogramming is increased. In this scenario, there are far more processes than the number of frames available. 
+    </p>
+<p>
+    The memory soon fills up and the process starts spending a lot of time for the required pages to be swapped in, causing the utilization of the CPU to fall low, as every process has to wait for pages.
+    </p>
+
+    <p> <p><h4 class="headerr">Effect of thrashing?</h4></p></p>
+<p>
+    When the operating system encounters a situation of thrashing then it tries to apply the following algorithms:
+    </p>
+<div style="margin-left: 25px;" >
+    <li>Global page replacement</li>
+    <li>Local page replacement</li>
+</div>
+
+
+<p> <p><h5 class="headerr">Global page replacement</h5></p></p>
+<p>
+    Whenever there is thrashing, the global page replacement algorithm tries to bring more pages.
+    </p>
+<p>Though, this is not a suitable algorithm as in this no process can get enough frames causing more thrashing.
+</p>
+
+<p> <p><h5 class="headerr">Local page replacement</h5></p></p>
+<p>
+    This algorithm may help in the reduction of thrashing as it brings pages that belongs to the process. 
+    </p>
+
+
+
+
+<!-- Site footer -->
+<footer class="site-footer"  style= "margin-top: 65px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">IT GEEK HUB <i>WANTS TO BE SIMPLE </i> is an initiative, to help the upcoming students with the coding and their subjects. IT GEEK HUB focuses on providing the most efficient code or snippets OR Notes materials as the students wants it to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm and etc.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+            <li><a href="#">TOPICS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+       <a href="#">IT GEEK HUB</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+<script src="../js/os.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
