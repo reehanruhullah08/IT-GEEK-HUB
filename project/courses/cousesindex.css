@@ -436,7 +436,7 @@ transition: all 0.3s ease;
               font-size: .8rem;
           }
       }
-      @media (max-width:440px)
+      @media (max-width:500px)
       {
         .c2 a {
           text-decoration: none;
