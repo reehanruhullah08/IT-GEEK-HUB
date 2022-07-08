@@ -504,3 +504,25 @@ transition: all 0.3s ease;
                 font-size: .8rem;
             }
         }
+        @media (max-width:530px){
+          .header{
+              font-family: 'Poppins', sans-serif;
+              font-weight: 700;
+              font-size: 1.0rem;
+            }
+            .sub-header{
+              font-family: sans-serif;
+              font-size: .8rem;
+          }
+          .vid{
+           
+    height: 82%;
+    width: 62%;
+    position: relative;
+    right: -50%;
+          }
+          .imgtrend{
+               height: 5rem;
+               width: 15rem;
+          }
+      }
