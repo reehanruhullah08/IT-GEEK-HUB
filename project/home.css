@@ -507,7 +507,6 @@ transition: all 0.3s ease;
            
               height: 82%;
               width: 62%;
-              position: relative;
               right: -50%;
                     }
                     .imgtrend{
@@ -529,7 +528,6 @@ transition: all 0.3s ease;
            
     height: 82%;
     width: 62%;
-    position: relative;
     right: -50%;
           }
           .imgtrend{
