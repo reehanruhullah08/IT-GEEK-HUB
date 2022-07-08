@@ -27,7 +27,7 @@ body{
 }
 section{
     
-    width: 100%;
+    max-width: 100%;
     height: auto;
     background-color: var(--body-color);
     background: linear-gradient(-45deg,#7c67ff,#836af5,#68d6ff,#894dff);
@@ -514,7 +514,22 @@ transition: all 0.3s ease;
                       width: 15rem;
                  }
         }
-        @media (max-width:530px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media (max-width:440px)
+        {
           .header{
               font-family: 'Poppins', sans-serif;
               font-weight: 700;
@@ -526,12 +541,17 @@ transition: all 0.3s ease;
           }
           .vid{
            
-    height: 82%;
-    width: 62%;
-    right: -50%;
+              height: 82%;
+               width: 62%;
+               right: -50%;
           }
           .imgtrend{
                height: 5rem;
                width: 15rem;
-          }
+          
+
       }
+
+        
+      }
+    
